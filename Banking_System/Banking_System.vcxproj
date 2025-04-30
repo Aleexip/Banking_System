@@ -111,7 +111,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\sql\sqlite-amalgamation-3490100\sqlite3.c" />
     <ClCompile Include="Account.cpp" />
+    <ClCompile Include="DatabaseHelper.cpp" />
     <ClCompile Include="DatabaseManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="LoginForm.cpp" />
@@ -127,12 +129,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\sql\sqlite-amalgamation-3490100\sqlite3.h" />
     <ClInclude Include="Account.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="DatabaseManager.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Header.h" />
     <ClInclude Include="LoginForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
