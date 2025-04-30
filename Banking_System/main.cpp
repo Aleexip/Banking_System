@@ -1,4 +1,10 @@
 #include "LoginForm.h"
+#include "MainDashboard.h"
+#include "TransferService.h"
+#include "Account.h"
+#include "TransactionHistory.h"
+#include "DatabaseManager.h"
+
 using namespace System;
 using namespace System::Windows::Forms;
 
