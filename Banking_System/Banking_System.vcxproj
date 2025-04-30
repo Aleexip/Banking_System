@@ -122,6 +122,9 @@
     <ClCompile Include="DatabaseHelper.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="LoginForm.cpp" />
+    <ClCompile Include="MainDashboard.cpp" />
+    <ClCompile Include="TransacationHistory.cpp" />
+    <ClCompile Include="TransferService.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -139,8 +142,20 @@
     <ClInclude Include="LoginForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MainDashboard.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TransacationHistory.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TransferService.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Account.resx">
+      <DependentUpon>Account.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.h</DependentUpon>
     </EmbeddedResource>
