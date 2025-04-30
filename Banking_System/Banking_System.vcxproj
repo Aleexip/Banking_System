@@ -131,12 +131,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\sql\sqlite-amalgamation-3490100\sqlite3.h" />
     <ClInclude Include="Account.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="DatabaseManager.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
+    <ClInclude Include="DatabaseHelper.h" />
     <ClInclude Include="LoginForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

@@ -1,12 +1,16 @@
 ﻿#include "LoginForm.h"
-#include "MainDashboard.h"
-#include "TransferService.h"
-#include "Account.h"
-#include "TransactionHistory.h"
-#include "DatabaseManager.h"
+
+#include <string>
+#include <iostream>
+
+//for database
+#include "DatabaseHelper.h"
+#include <filesystem>      // for directory creation     
+#include <sqlite3.h>
 
 using namespace System;
 using namespace System::Windows::Forms;
+
 
 int main(array <String^>^ args)
 {

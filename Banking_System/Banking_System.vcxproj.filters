@@ -53,12 +53,18 @@
     <ClInclude Include="TransactionHistory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DatabaseManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Account.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DatabaseHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sql\sqlite-amalgamation-3490100\sqlite3.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
