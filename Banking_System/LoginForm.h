@@ -54,7 +54,7 @@ namespace BankingSystem {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -198,5 +198,5 @@ namespace BankingSystem {
 	}
 	private: System::Void label2_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	}
-};
+	};
 }

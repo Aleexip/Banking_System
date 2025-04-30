@@ -21,39 +21,27 @@
     <ClCompile Include="LoginForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TransactionHistory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="TransferService.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MainDashboard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DatabaseManager.cpp">
+    <ClCompile Include="Account.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Account.cpp">
+    <ClCompile Include="DatabaseHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\sql\sqlite-amalgamation-3490100\sqlite3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TransacationHistory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LoginForm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MainDashboard.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TransferService.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TransactionHistory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DatabaseManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Account.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
