@@ -68,7 +68,7 @@ namespace BankingSystem {
 			// 
 			// label1
 			// 
-			this->label1->BackColor = System::Drawing::Color::Wheat;
+			this->label1->BackColor = System::Drawing::Color::DeepSkyBlue;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold));
 			this->label1->Location = System::Drawing::Point(0, 0);
 			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
@@ -80,8 +80,9 @@ namespace BankingSystem {
 			// 
 			// btnAccount
 			// 
-			this->btnAccount->BackColor = System::Drawing::Color::MediumSeaGreen;
+			this->btnAccount->BackColor = System::Drawing::Color::Black;
 			this->btnAccount->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold));
+			this->btnAccount->ForeColor = System::Drawing::SystemColors::Control;
 			this->btnAccount->Location = System::Drawing::Point(31, 110);
 			this->btnAccount->Margin = System::Windows::Forms::Padding(2);
 			this->btnAccount->Name = L"btnAccount";
@@ -93,8 +94,9 @@ namespace BankingSystem {
 			// 
 			// button2
 			// 
-			this->button2->BackColor = System::Drawing::Color::MediumSeaGreen;
+			this->button2->BackColor = System::Drawing::Color::Black;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold));
+			this->button2->ForeColor = System::Drawing::SystemColors::Control;
 			this->button2->Location = System::Drawing::Point(31, 212);
 			this->button2->Margin = System::Windows::Forms::Padding(2);
 			this->button2->Name = L"button2";
@@ -106,8 +108,9 @@ namespace BankingSystem {
 			// 
 			// button3
 			// 
-			this->button3->BackColor = System::Drawing::Color::MediumSeaGreen;
+			this->button3->BackColor = System::Drawing::Color::Black;
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold));
+			this->button3->ForeColor = System::Drawing::SystemColors::Control;
 			this->button3->Location = System::Drawing::Point(31, 318);
 			this->button3->Margin = System::Windows::Forms::Padding(2);
 			this->button3->Name = L"button3";
@@ -134,7 +137,7 @@ namespace BankingSystem {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::BlanchedAlmond;
+			this->BackColor = System::Drawing::Color::SteelBlue;
 			this->ClientSize = System::Drawing::Size(512, 449);
 			this->Controls->Add(this->btnLogOut);
 			this->Controls->Add(this->button3);

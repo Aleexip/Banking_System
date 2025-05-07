@@ -62,7 +62,7 @@ namespace BankingSystem {
 			// 
 			// lTransferHistory
 			// 
-			this->lTransferHistory->BackColor = System::Drawing::Color::Wheat;
+			this->lTransferHistory->BackColor = System::Drawing::Color::DeepSkyBlue;
 			this->lTransferHistory->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Bold));
 			this->lTransferHistory->Location = System::Drawing::Point(0, 0);
 			this->lTransferHistory->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
@@ -75,18 +75,19 @@ namespace BankingSystem {
 			// 
 			// dtTransferHistory
 			// 
+			this->dtTransferHistory->CalendarMonthBackground = System::Drawing::SystemColors::Menu;
 			this->dtTransferHistory->Location = System::Drawing::Point(9, 57);
-			this->dtTransferHistory->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->dtTransferHistory->Margin = System::Windows::Forms::Padding(2);
 			this->dtTransferHistory->Name = L"dtTransferHistory";
 			this->dtTransferHistory->Size = System::Drawing::Size(188, 20);
 			this->dtTransferHistory->TabIndex = 1;
 			// 
 			// listView1
 			// 
-			this->listView1->BackColor = System::Drawing::Color::BlanchedAlmond;
+			this->listView1->BackColor = System::Drawing::Color::SteelBlue;
 			this->listView1->HideSelection = false;
 			this->listView1->Location = System::Drawing::Point(9, 80);
-			this->listView1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->listView1->Margin = System::Windows::Forms::Padding(2);
 			this->listView1->Name = L"listView1";
 			this->listView1->Size = System::Drawing::Size(720, 442);
 			this->listView1->TabIndex = 2;
@@ -96,12 +97,12 @@ namespace BankingSystem {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::BlanchedAlmond;
+			this->BackColor = System::Drawing::Color::DeepSkyBlue;
 			this->ClientSize = System::Drawing::Size(736, 531);
 			this->Controls->Add(this->listView1);
 			this->Controls->Add(this->dtTransferHistory);
 			this->Controls->Add(this->lTransferHistory);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"TransactionHistory";
 			this->Text = L"TransactionHistory";
 			this->Load += gcnew System::EventHandler(this, &TransactionHistory::TransactionHistory_Load);

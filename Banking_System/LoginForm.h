@@ -78,7 +78,7 @@ namespace BankingSystem {
 			// lTitle
 			// 
 			this->lTitle->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->lTitle->BackColor = System::Drawing::Color::Wheat;
+			this->lTitle->BackColor = System::Drawing::Color::SteelBlue;
 			this->lTitle->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->lTitle->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 26.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -94,10 +94,11 @@ namespace BankingSystem {
 			// lEmail
 			// 
 			this->lEmail->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->lEmail->BackColor = System::Drawing::Color::Wheat;
+			this->lEmail->BackColor = System::Drawing::Color::Black;
 			this->lEmail->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->lEmail->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->lEmail->ForeColor = System::Drawing::SystemColors::Control;
 			this->lEmail->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->lEmail->Location = System::Drawing::Point(40, 181);
 			this->lEmail->Name = L"lEmail";
@@ -111,6 +112,7 @@ namespace BankingSystem {
 			// 
 			this->tbEmail->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->tbEmail->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->tbEmail->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->tbEmail->Location = System::Drawing::Point(171, 191);
 			this->tbEmail->Name = L"tbEmail";
 			this->tbEmail->Size = System::Drawing::Size(347, 20);
@@ -120,10 +122,11 @@ namespace BankingSystem {
 			// lPassword
 			// 
 			this->lPassword->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->lPassword->BackColor = System::Drawing::Color::Wheat;
+			this->lPassword->BackColor = System::Drawing::Color::Black;
 			this->lPassword->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->lPassword->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->lPassword->ForeColor = System::Drawing::SystemColors::Control;
 			this->lPassword->Location = System::Drawing::Point(40, 288);
 			this->lPassword->Name = L"lPassword";
 			this->lPassword->Size = System::Drawing::Size(94, 37);
@@ -136,6 +139,7 @@ namespace BankingSystem {
 			// 
 			this->tbPassword->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->tbPassword->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->tbPassword->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->tbPassword->Location = System::Drawing::Point(171, 298);
 			this->tbPassword->Name = L"tbPassword";
 			this->tbPassword->PasswordChar = '*';
@@ -145,7 +149,7 @@ namespace BankingSystem {
 			// btnCancel
 			// 
 			this->btnCancel->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->btnCancel->BackColor = System::Drawing::Color::MediumSeaGreen;
+			this->btnCancel->BackColor = System::Drawing::Color::SteelBlue;
 			this->btnCancel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnCancel->Location = System::Drawing::Point(363, 393);
@@ -159,7 +163,7 @@ namespace BankingSystem {
 			// btnOk
 			// 
 			this->btnOk->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->btnOk->BackColor = System::Drawing::Color::MediumSeaGreen;
+			this->btnOk->BackColor = System::Drawing::Color::SteelBlue;
 			this->btnOk->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnOk->Location = System::Drawing::Point(171, 393);
@@ -175,7 +179,7 @@ namespace BankingSystem {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSize = true;
-			this->BackColor = System::Drawing::Color::BlanchedAlmond;
+			this->BackColor = System::Drawing::Color::DeepSkyBlue;
 			this->ClientSize = System::Drawing::Size(592, 504);
 			this->Controls->Add(this->btnOk);
 			this->Controls->Add(this->btnCancel);

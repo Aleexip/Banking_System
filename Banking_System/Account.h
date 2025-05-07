@@ -119,7 +119,7 @@ namespace BankingSystem {
 			// 
 			// lSpentThisMonth
 			// 
-			this->lSpentThisMonth->BackColor = System::Drawing::Color::Wheat;
+			this->lSpentThisMonth->BackColor = System::Drawing::Color::SteelBlue;
 			this->lSpentThisMonth->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->lSpentThisMonth->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold));
 			this->lSpentThisMonth->Location = System::Drawing::Point(9, 41);
@@ -152,7 +152,7 @@ namespace BankingSystem {
 			// 
 			// lAccount_Design
 			// 
-			this->lAccount_Design->BackColor = System::Drawing::Color::Wheat;
+			this->lAccount_Design->BackColor = System::Drawing::Color::SteelBlue;
 			this->lAccount_Design->Location = System::Drawing::Point(9, 134);
 			this->lAccount_Design->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lAccount_Design->Name = L"lAccount_Design";
@@ -161,7 +161,7 @@ namespace BankingSystem {
 			// 
 			// lCurrentAccount
 			// 
-			this->lCurrentAccount->BackColor = System::Drawing::Color::Wheat;
+			this->lCurrentAccount->BackColor = System::Drawing::Color::SteelBlue;
 			this->lCurrentAccount->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold));
 			this->lCurrentAccount->Location = System::Drawing::Point(13, 141);
 			this->lCurrentAccount->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
@@ -184,7 +184,7 @@ namespace BankingSystem {
 			// 
 			// btnNewTransfer
 			// 
-			this->btnNewTransfer->BackColor = System::Drawing::Color::MediumSeaGreen;
+			this->btnNewTransfer->BackColor = System::Drawing::Color::DarkGray;
 			this->btnNewTransfer->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold));
 			this->btnNewTransfer->Location = System::Drawing::Point(12, 211);
 			this->btnNewTransfer->Margin = System::Windows::Forms::Padding(2);
@@ -196,7 +196,7 @@ namespace BankingSystem {
 			// 
 			// label2
 			// 
-			this->label2->BackColor = System::Drawing::Color::Wheat;
+			this->label2->BackColor = System::Drawing::Color::SteelBlue;
 			this->label2->Location = System::Drawing::Point(284, 134);
 			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
@@ -205,7 +205,7 @@ namespace BankingSystem {
 			// 
 			// lIBANAccount
 			// 
-			this->lIBANAccount->BackColor = System::Drawing::Color::Wheat;
+			this->lIBANAccount->BackColor = System::Drawing::Color::SteelBlue;
 			this->lIBANAccount->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold));
 			this->lIBANAccount->Location = System::Drawing::Point(290, 141);
 			this->lIBANAccount->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
@@ -240,7 +240,7 @@ namespace BankingSystem {
 			// 
 			// lCardNumber
 			// 
-			this->lCardNumber->BackColor = System::Drawing::Color::Wheat;
+			this->lCardNumber->BackColor = System::Drawing::Color::SteelBlue;
 			this->lCardNumber->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold));
 			this->lCardNumber->Location = System::Drawing::Point(290, 192);
 			this->lCardNumber->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
@@ -263,7 +263,7 @@ namespace BankingSystem {
 			// 
 			// lExpirationDate
 			// 
-			this->lExpirationDate->BackColor = System::Drawing::Color::Wheat;
+			this->lExpirationDate->BackColor = System::Drawing::Color::SteelBlue;
 			this->lExpirationDate->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold));
 			this->lExpirationDate->Location = System::Drawing::Point(445, 192);
 			this->lExpirationDate->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
@@ -278,7 +278,7 @@ namespace BankingSystem {
 			this->tbCVC->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->tbCVC->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->tbCVC->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold));
-			this->tbCVC->Location = System::Drawing::Point(571, 211);
+			this->tbCVC->Location = System::Drawing::Point(584, 211);
 			this->tbCVC->Name = L"tbCVC";
 			this->tbCVC->Size = System::Drawing::Size(32, 23);
 			this->tbCVC->TabIndex = 22;
@@ -286,9 +286,9 @@ namespace BankingSystem {
 			// 
 			// lCVC
 			// 
-			this->lCVC->BackColor = System::Drawing::Color::Wheat;
+			this->lCVC->BackColor = System::Drawing::Color::SteelBlue;
 			this->lCVC->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold));
-			this->lCVC->Location = System::Drawing::Point(544, 192);
+			this->lCVC->Location = System::Drawing::Point(583, 192);
 			this->lCVC->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lCVC->Name = L"lCVC";
 			this->lCVC->Size = System::Drawing::Size(42, 20);
@@ -297,7 +297,7 @@ namespace BankingSystem {
 			// 
 			// label3
 			// 
-			this->label3->BackColor = System::Drawing::Color::Wheat;
+			this->label3->BackColor = System::Drawing::Color::SteelBlue;
 			this->label3->Location = System::Drawing::Point(9, 251);
 			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
@@ -306,7 +306,7 @@ namespace BankingSystem {
 			// 
 			// lMoneyBack
 			// 
-			this->lMoneyBack->BackColor = System::Drawing::Color::Wheat;
+			this->lMoneyBack->BackColor = System::Drawing::Color::SteelBlue;
 			this->lMoneyBack->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold));
 			this->lMoneyBack->Location = System::Drawing::Point(14, 258);
 			this->lMoneyBack->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
@@ -328,7 +328,7 @@ namespace BankingSystem {
 			// 
 			// btnTransactionH
 			// 
-			this->btnTransactionH->BackColor = System::Drawing::Color::MediumSeaGreen;
+			this->btnTransactionH->BackColor = System::Drawing::Color::SteelBlue;
 			this->btnTransactionH->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold));
 			this->btnTransactionH->Location = System::Drawing::Point(165, 41);
 			this->btnTransactionH->Margin = System::Windows::Forms::Padding(2);
@@ -343,7 +343,7 @@ namespace BankingSystem {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::BlanchedAlmond;
+			this->BackColor = System::Drawing::Color::DeepSkyBlue;
 			this->ClientSize = System::Drawing::Size(711, 454);
 			this->Controls->Add(this->btnTransactionH);
 			this->Controls->Add(this->textBox1);
