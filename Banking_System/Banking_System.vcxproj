@@ -78,7 +78,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\downloads\proiecte_programare\sql\sqlite-amalgamation-3490100</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\vadan\Desktop\sqlite-amalgamation-3490100</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
@@ -116,7 +116,6 @@
   <ItemGroup>
     <ClCompile Include="..\..\sql\sqlite-amalgamation-3490100\sqlite3.c">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Default</CompileAs>
-      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/clr- %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClCompile Include="Account.cpp" />
     <ClCompile Include="DatabaseHelper.cpp" />
