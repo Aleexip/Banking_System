@@ -1,4 +1,7 @@
-#pragma once
+﻿#pragma once
+
+#include "MainDashboard.h"
+#include "Account.h"
 
 namespace BankingSystem {
 
@@ -75,7 +78,7 @@ namespace BankingSystem {
 			// lTitle
 			// 
 			this->lTitle->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->lTitle->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->lTitle->BackColor = System::Drawing::Color::Wheat;
 			this->lTitle->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->lTitle->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 26.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -91,7 +94,7 @@ namespace BankingSystem {
 			// lEmail
 			// 
 			this->lEmail->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->lEmail->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->lEmail->BackColor = System::Drawing::Color::Wheat;
 			this->lEmail->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->lEmail->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -117,7 +120,7 @@ namespace BankingSystem {
 			// lPassword
 			// 
 			this->lPassword->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->lPassword->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->lPassword->BackColor = System::Drawing::Color::Wheat;
 			this->lPassword->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->lPassword->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -142,7 +145,7 @@ namespace BankingSystem {
 			// btnCancel
 			// 
 			this->btnCancel->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->btnCancel->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->btnCancel->BackColor = System::Drawing::Color::MediumSeaGreen;
 			this->btnCancel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnCancel->Location = System::Drawing::Point(363, 393);
@@ -151,11 +154,12 @@ namespace BankingSystem {
 			this->btnCancel->TabIndex = 6;
 			this->btnCancel->Text = L"Cancel";
 			this->btnCancel->UseVisualStyleBackColor = false;
+			this->btnCancel->Click += gcnew System::EventHandler(this, &LoginForm::btnCancel_Click);
 			// 
 			// btnOk
 			// 
 			this->btnOk->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->btnOk->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->btnOk->BackColor = System::Drawing::Color::MediumSeaGreen;
 			this->btnOk->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnOk->Location = System::Drawing::Point(171, 393);
@@ -164,13 +168,14 @@ namespace BankingSystem {
 			this->btnOk->TabIndex = 7;
 			this->btnOk->Text = L"OK";
 			this->btnOk->UseVisualStyleBackColor = false;
+			this->btnOk->Click += gcnew System::EventHandler(this, &LoginForm::btnOk_Click);
 			// 
 			// LoginForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSize = true;
-			this->BackColor = System::Drawing::Color::LightSalmon;
+			this->BackColor = System::Drawing::Color::BlanchedAlmond;
 			this->ClientSize = System::Drawing::Size(592, 504);
 			this->Controls->Add(this->btnOk);
 			this->Controls->Add(this->btnCancel);
@@ -198,5 +203,20 @@ namespace BankingSystem {
 	}
 	private: System::Void label2_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	}
-	};
+	private: System::Void btnOk_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		this->Hide(); // hide the current form
+
+		// Ensure MainDashboard is recognized
+		MainDashboard^ mainDashboard = gcnew MainDashboard();
+		mainDashboard->ShowDialog(); // open dashboard as dialog
+
+		Application::Exit(); // close the application when the dashboard is closed
+	}
+
+private: System::Void btnCancel_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	this->Close(); // close the login form
+}
+};
 }

@@ -123,7 +123,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="MainDashboard.cpp" />
-    <ClCompile Include="TransacationHistory.cpp" />
+    <ClCompile Include="TransactionHistory.cpp" />
     <ClCompile Include="TransferService.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -145,7 +145,7 @@
     <ClInclude Include="MainDashboard.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="TransacationHistory.h">
+    <ClInclude Include="TransactionHistory.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="TransferService.h">
@@ -158,6 +158,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainDashboard.resx">
+      <DependentUpon>MainDashboard.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionHistory.resx">
+      <DependentUpon>TransactionHistory.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferService.resx">
+      <DependentUpon>TransferService.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

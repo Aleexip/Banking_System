@@ -1,4 +1,5 @@
 ﻿#include "LoginForm.h"
+#include "MainDashboard.h"
 
 #include <string>
 #include <iostream>
