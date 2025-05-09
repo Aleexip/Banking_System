@@ -78,11 +78,13 @@ namespace BankingSystem {
 			// lTitle
 			// 
 			this->lTitle->Anchor = System::Windows::Forms::AnchorStyles::Top;
-			this->lTitle->BackColor = System::Drawing::Color::SteelBlue;
+			this->lTitle->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+				static_cast<System::Int32>(static_cast<System::Byte>(184)));
 			this->lTitle->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->lTitle->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 26.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->lTitle->Font = (gcnew System::Drawing::Font(L"Segoe UI", 26.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lTitle->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->lTitle->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
 			this->lTitle->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->lTitle->Location = System::Drawing::Point(224, 76);
 			this->lTitle->Name = L"lTitle";
@@ -94,11 +96,12 @@ namespace BankingSystem {
 			// lEmail
 			// 
 			this->lEmail->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->lEmail->BackColor = System::Drawing::Color::Black;
-			this->lEmail->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->lEmail->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->lEmail->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+				static_cast<System::Int32>(static_cast<System::Byte>(184)));
+			this->lEmail->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lEmail->ForeColor = System::Drawing::SystemColors::Control;
+			this->lEmail->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
 			this->lEmail->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->lEmail->Location = System::Drawing::Point(40, 181);
 			this->lEmail->Name = L"lEmail";
@@ -122,11 +125,12 @@ namespace BankingSystem {
 			// lPassword
 			// 
 			this->lPassword->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->lPassword->BackColor = System::Drawing::Color::Black;
-			this->lPassword->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->lPassword->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->lPassword->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+				static_cast<System::Int32>(static_cast<System::Byte>(184)));
+			this->lPassword->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lPassword->ForeColor = System::Drawing::SystemColors::Control;
+			this->lPassword->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
 			this->lPassword->Location = System::Drawing::Point(40, 288);
 			this->lPassword->Name = L"lPassword";
 			this->lPassword->Size = System::Drawing::Size(94, 37);
@@ -149,10 +153,12 @@ namespace BankingSystem {
 			// btnCancel
 			// 
 			this->btnCancel->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->btnCancel->BackColor = System::Drawing::Color::SteelBlue;
-			this->btnCancel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btnCancel->BackColor = System::Drawing::Color::Chocolate;
+			this->btnCancel->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnCancel->Location = System::Drawing::Point(363, 393);
+			this->btnCancel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
+			this->btnCancel->Location = System::Drawing::Point(374, 393);
 			this->btnCancel->Name = L"btnCancel";
 			this->btnCancel->Size = System::Drawing::Size(105, 57);
 			this->btnCancel->TabIndex = 6;
@@ -163,10 +169,13 @@ namespace BankingSystem {
 			// btnOk
 			// 
 			this->btnOk->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->btnOk->BackColor = System::Drawing::Color::SteelBlue;
-			this->btnOk->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btnOk->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(78)), static_cast<System::Int32>(static_cast<System::Byte>(148)),
+				static_cast<System::Int32>(static_cast<System::Byte>(79)));
+			this->btnOk->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnOk->Location = System::Drawing::Point(171, 393);
+			this->btnOk->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
+			this->btnOk->Location = System::Drawing::Point(113, 393);
 			this->btnOk->Name = L"btnOk";
 			this->btnOk->Size = System::Drawing::Size(105, 57);
 			this->btnOk->TabIndex = 7;
@@ -179,7 +188,8 @@ namespace BankingSystem {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSize = true;
-			this->BackColor = System::Drawing::Color::DeepSkyBlue;
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+				static_cast<System::Int32>(static_cast<System::Byte>(184)));
 			this->ClientSize = System::Drawing::Size(592, 504);
 			this->Controls->Add(this->btnOk);
 			this->Controls->Add(this->btnCancel);

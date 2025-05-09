@@ -38,7 +38,9 @@ namespace BankingSystem {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ l_Welcome_back;
+	protected:
+
 	private: System::Windows::Forms::Button^ btnAccount;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button3;
@@ -59,28 +61,29 @@ namespace BankingSystem {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->l_Welcome_back = (gcnew System::Windows::Forms::Label());
 			this->btnAccount = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->btnLogOut = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// label1
+			// l_Welcome_back
 			// 
-			this->label1->BackColor = System::Drawing::Color::DeepSkyBlue;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold));
-			this->label1->Location = System::Drawing::Point(0, 0);
-			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(514, 57);
-			this->label1->TabIndex = 0;
-			this->label1->Text = L"       Welcome back";
-			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->l_Welcome_back->BackColor = System::Drawing::Color::Wheat;
+			this->l_Welcome_back->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Bold));
+			this->l_Welcome_back->Location = System::Drawing::Point(0, 0);
+			this->l_Welcome_back->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->l_Welcome_back->Name = L"l_Welcome_back";
+			this->l_Welcome_back->Size = System::Drawing::Size(514, 57);
+			this->l_Welcome_back->TabIndex = 0;
+			this->l_Welcome_back->Text = L"       Welcome back";
+			this->l_Welcome_back->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
 			// btnAccount
 			// 
-			this->btnAccount->BackColor = System::Drawing::Color::Black;
+			this->btnAccount->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(78)), static_cast<System::Int32>(static_cast<System::Byte>(148)),
+				static_cast<System::Int32>(static_cast<System::Byte>(79)));
 			this->btnAccount->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold));
 			this->btnAccount->ForeColor = System::Drawing::SystemColors::Control;
 			this->btnAccount->Location = System::Drawing::Point(31, 110);
@@ -94,7 +97,8 @@ namespace BankingSystem {
 			// 
 			// button2
 			// 
-			this->button2->BackColor = System::Drawing::Color::Black;
+			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(78)), static_cast<System::Int32>(static_cast<System::Byte>(148)),
+				static_cast<System::Int32>(static_cast<System::Byte>(79)));
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold));
 			this->button2->ForeColor = System::Drawing::SystemColors::Control;
 			this->button2->Location = System::Drawing::Point(31, 212);
@@ -108,7 +112,8 @@ namespace BankingSystem {
 			// 
 			// button3
 			// 
-			this->button3->BackColor = System::Drawing::Color::Black;
+			this->button3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(78)), static_cast<System::Int32>(static_cast<System::Byte>(148)),
+				static_cast<System::Int32>(static_cast<System::Byte>(79)));
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold));
 			this->button3->ForeColor = System::Drawing::SystemColors::Control;
 			this->button3->Location = System::Drawing::Point(31, 318);
@@ -137,13 +142,15 @@ namespace BankingSystem {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::SteelBlue;
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+				static_cast<System::Int32>(static_cast<System::Byte>(184)));
 			this->ClientSize = System::Drawing::Size(512, 449);
 			this->Controls->Add(this->btnLogOut);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->btnAccount);
-			this->Controls->Add(this->label1);
+			this->Controls->Add(this->l_Welcome_back);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
 			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"MainDashboard";
 			this->Text = L"MainDashboard";

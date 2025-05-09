@@ -33,18 +33,18 @@
     <ClCompile Include="DatabaseHelper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\sql\sqlite-amalgamation-3490100\sqlite3.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="TransactionHistory.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\vadan\Desktop\sqlite-amalgamation-3490100\sqlite3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Register.cpp">
+      <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LoginForm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\sql\sqlite-amalgamation-3490100\sqlite3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Account.h">
@@ -60,6 +60,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TransferService.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\vadan\Desktop\sqlite-amalgamation-3490100\sqlite3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StartPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Register.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

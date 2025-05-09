@@ -56,6 +56,7 @@ namespace BankingSystem {
 	private: System::Windows::Forms::PictureBox^ pictureBox5;
 	private: System::Windows::Forms::PictureBox^ pictureBox6;
 	private: System::Windows::Forms::PictureBox^ pictureBox7;
+	private: System::Windows::Forms::Button^ btnCancel;
 
 
 
@@ -97,6 +98,7 @@ namespace BankingSystem {
 			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
+			this->btnCancel = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
@@ -108,7 +110,7 @@ namespace BankingSystem {
 			// 
 			// lTransferManual
 			// 
-			this->lTransferManual->BackColor = System::Drawing::Color::White;
+			this->lTransferManual->BackColor = System::Drawing::Color::Wheat;
 			this->lTransferManual->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17.5F, System::Drawing::FontStyle::Bold));
 			this->lTransferManual->Location = System::Drawing::Point(86, 0);
 			this->lTransferManual->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
@@ -189,7 +191,8 @@ namespace BankingSystem {
 			// tbPaymentNote
 			// 
 			this->tbPaymentNote->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->tbPaymentNote->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->tbPaymentNote->BackColor = System::Drawing::Color::Gainsboro;
+			this->tbPaymentNote->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->tbPaymentNote->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold));
 			this->tbPaymentNote->Location = System::Drawing::Point(58, 238);
 			this->tbPaymentNote->Name = L"tbPaymentNote";
@@ -209,9 +212,9 @@ namespace BankingSystem {
 			// 
 			// pictureBox1
 			// 
-			this->pictureBox1->BackColor = System::Drawing::Color::White;
+			this->pictureBox1->BackColor = System::Drawing::Color::Wheat;
 			this->pictureBox1->Location = System::Drawing::Point(-1, -1);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(91, 58);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -232,17 +235,18 @@ namespace BankingSystem {
 			// mcTransfer
 			// 
 			this->mcTransfer->Location = System::Drawing::Point(182, 262);
-			this->mcTransfer->Margin = System::Windows::Forms::Padding(7, 7, 7, 7);
+			this->mcTransfer->Margin = System::Windows::Forms::Padding(7);
 			this->mcTransfer->Name = L"mcTransfer";
 			this->mcTransfer->TabIndex = 12;
 			// 
 			// button1
 			// 
-			this->button1->BackColor = System::Drawing::Color::Black;
+			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(78)), static_cast<System::Int32>(static_cast<System::Byte>(148)),
+				static_cast<System::Int32>(static_cast<System::Byte>(79)));
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10, System::Drawing::FontStyle::Bold));
 			this->button1->ForeColor = System::Drawing::SystemColors::Control;
 			this->button1->Location = System::Drawing::Point(60, 333);
-			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button1->Margin = System::Windows::Forms::Padding(2);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(81, 37);
 			this->button1->TabIndex = 13;
@@ -251,7 +255,7 @@ namespace BankingSystem {
 			// 
 			// lbTransfer_Design
 			// 
-			this->lbTransfer_Design->BackColor = System::Drawing::Color::White;
+			this->lbTransfer_Design->BackColor = System::Drawing::Color::Wheat;
 			this->lbTransfer_Design->Location = System::Drawing::Point(-3, 53);
 			this->lbTransfer_Design->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lbTransfer_Design->Name = L"lbTransfer_Design";
@@ -260,9 +264,10 @@ namespace BankingSystem {
 			// 
 			// pictureBox2
 			// 
-			this->pictureBox2->BackColor = System::Drawing::Color::SteelBlue;
+			this->pictureBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+				static_cast<System::Int32>(static_cast<System::Byte>(184)));
 			this->pictureBox2->Location = System::Drawing::Point(13, 139);
-			this->pictureBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->pictureBox2->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(22, 24);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -271,9 +276,10 @@ namespace BankingSystem {
 			// 
 			// pictureBox3
 			// 
-			this->pictureBox3->BackColor = System::Drawing::Color::SteelBlue;
+			this->pictureBox3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+				static_cast<System::Int32>(static_cast<System::Byte>(184)));
 			this->pictureBox3->Location = System::Drawing::Point(13, 91);
-			this->pictureBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->pictureBox3->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(22, 24);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -282,9 +288,10 @@ namespace BankingSystem {
 			// 
 			// pictureBox4
 			// 
-			this->pictureBox4->BackColor = System::Drawing::Color::SteelBlue;
+			this->pictureBox4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+				static_cast<System::Int32>(static_cast<System::Byte>(184)));
 			this->pictureBox4->Location = System::Drawing::Point(13, 186);
-			this->pictureBox4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->pictureBox4->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox4->Name = L"pictureBox4";
 			this->pictureBox4->Size = System::Drawing::Size(22, 24);
 			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -293,9 +300,10 @@ namespace BankingSystem {
 			// 
 			// pictureBox5
 			// 
-			this->pictureBox5->BackColor = System::Drawing::Color::SteelBlue;
+			this->pictureBox5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+				static_cast<System::Int32>(static_cast<System::Byte>(184)));
 			this->pictureBox5->Location = System::Drawing::Point(13, 234);
-			this->pictureBox5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->pictureBox5->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox5->Name = L"pictureBox5";
 			this->pictureBox5->Size = System::Drawing::Size(22, 24);
 			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -304,9 +312,10 @@ namespace BankingSystem {
 			// 
 			// pictureBox6
 			// 
-			this->pictureBox6->BackColor = System::Drawing::Color::SteelBlue;
+			this->pictureBox6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+				static_cast<System::Int32>(static_cast<System::Byte>(184)));
 			this->pictureBox6->Location = System::Drawing::Point(13, 262);
-			this->pictureBox6->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->pictureBox6->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox6->Name = L"pictureBox6";
 			this->pictureBox6->Size = System::Drawing::Size(22, 24);
 			this->pictureBox6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -315,21 +324,38 @@ namespace BankingSystem {
 			// 
 			// pictureBox7
 			// 
-			this->pictureBox7->BackColor = System::Drawing::Color::SteelBlue;
+			this->pictureBox7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+				static_cast<System::Int32>(static_cast<System::Byte>(184)));
 			this->pictureBox7->Location = System::Drawing::Point(13, 340);
-			this->pictureBox7->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->pictureBox7->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox7->Name = L"pictureBox7";
 			this->pictureBox7->Size = System::Drawing::Size(22, 24);
 			this->pictureBox7->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox7->TabIndex = 20;
 			this->pictureBox7->TabStop = false;
 			// 
+			// btnCancel
+			// 
+			this->btnCancel->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->btnCancel->BackColor = System::Drawing::Color::Chocolate;
+			this->btnCancel->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnCancel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
+			this->btnCancel->Location = System::Drawing::Point(469, 367);
+			this->btnCancel->Name = L"btnCancel";
+			this->btnCancel->Size = System::Drawing::Size(105, 57);
+			this->btnCancel->TabIndex = 21;
+			this->btnCancel->Text = L"Cancel";
+			this->btnCancel->UseVisualStyleBackColor = false;
+			// 
 			// TransferService
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::DeepSkyBlue;
+			this->BackColor = System::Drawing::Color::BlanchedAlmond;
 			this->ClientSize = System::Drawing::Size(586, 449);
+			this->Controls->Add(this->btnCancel);
 			this->Controls->Add(this->pictureBox7);
 			this->Controls->Add(this->pictureBox6);
 			this->Controls->Add(this->pictureBox5);
@@ -350,7 +376,7 @@ namespace BankingSystem {
 			this->Controls->Add(this->tbRecipientName);
 			this->Controls->Add(this->lRecipientName);
 			this->Controls->Add(this->lTransferManual);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"TransferService";
 			this->Text = L"TransferService";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
