@@ -34,18 +34,30 @@ namespace BankingSystem {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^ l_Register;
+	private: System::Windows::Forms::Label^ lRegister;
 	protected:
-	private: System::Windows::Forms::Label^ l_Nume;
-	private: System::Windows::Forms::Label^ l_Prenume;
-	private: System::Windows::Forms::Label^ l_Email;
-	private: System::Windows::Forms::Label^ l_Parola;
-	private: System::Windows::Forms::Label^ l_Data_n;
+
+	private: System::Windows::Forms::Label^ lNume;
+	private: System::Windows::Forms::Label^ lPrenume;
+	private: System::Windows::Forms::Label^ lEmail;
+	private: System::Windows::Forms::Label^ lParola;
+	private: System::Windows::Forms::Label^ lDataNasterii;
+	protected:
+
+
+
+
+
+	private: System::Windows::Forms::TextBox^ tbNume;
+	private: System::Windows::Forms::TextBox^ tbPrenume;
 	private: System::Windows::Forms::TextBox^ tbEmail;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
+	private: System::Windows::Forms::TextBox^ tbParola;
+	private: System::Windows::Forms::DateTimePicker^ dateTimePicker_DataNasterii;
+
+
+
+
+
 	private: System::Windows::Forms::Button^ btnOk;
 	private: System::Windows::Forms::Button^ btnCancel;
 
@@ -63,137 +75,159 @@ namespace BankingSystem {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->l_Register = (gcnew System::Windows::Forms::Label());
-			this->l_Nume = (gcnew System::Windows::Forms::Label());
-			this->l_Prenume = (gcnew System::Windows::Forms::Label());
-			this->l_Email = (gcnew System::Windows::Forms::Label());
-			this->l_Parola = (gcnew System::Windows::Forms::Label());
-			this->l_Data_n = (gcnew System::Windows::Forms::Label());
+			this->lRegister = (gcnew System::Windows::Forms::Label());
+			this->lNume = (gcnew System::Windows::Forms::Label());
+			this->lPrenume = (gcnew System::Windows::Forms::Label());
+			this->lEmail = (gcnew System::Windows::Forms::Label());
+			this->lParola = (gcnew System::Windows::Forms::Label());
+			this->lDataNasterii = (gcnew System::Windows::Forms::Label());
+			this->tbNume = (gcnew System::Windows::Forms::TextBox());
+			this->tbPrenume = (gcnew System::Windows::Forms::TextBox());
 			this->tbEmail = (gcnew System::Windows::Forms::TextBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->tbParola = (gcnew System::Windows::Forms::TextBox());
+			this->dateTimePicker_DataNasterii = (gcnew System::Windows::Forms::DateTimePicker());
 			this->btnOk = (gcnew System::Windows::Forms::Button());
 			this->btnCancel = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// l_Register
+			// lRegister
 			// 
-			this->l_Register->AutoSize = true;
-			this->l_Register->Font = (gcnew System::Drawing::Font(L"Segoe UI", 26.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->lRegister->Font = (gcnew System::Drawing::Font(L"Segoe UI", 26.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->l_Register->Location = System::Drawing::Point(160, 52);
-			this->l_Register->Name = L"l_Register";
-			this->l_Register->Size = System::Drawing::Size(155, 47);
-			this->l_Register->TabIndex = 0;
-			this->l_Register->Text = L"Register";
+			this->lRegister->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
+			this->lRegister->Location = System::Drawing::Point(225, 50);
+			this->lRegister->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lRegister->Name = L"lRegister";
+			this->lRegister->Size = System::Drawing::Size(200, 75);
+			this->lRegister->TabIndex = 0;
+			this->lRegister->Text = L"Register";
 			// 
-			// l_Nume
+			// lNume
 			// 
-			this->l_Nume->AutoSize = true;
-			this->l_Nume->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->l_Nume->Location = System::Drawing::Point(46, 150);
-			this->l_Nume->Name = L"l_Nume";
-			this->l_Nume->Size = System::Drawing::Size(53, 21);
-			this->l_Nume->TabIndex = 1;
-			this->l_Nume->Text = L"Nume";
+			this->lNume->AutoSize = true;
+			this->lNume->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
+			this->lNume->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
+			this->lNume->Location = System::Drawing::Point(60, 150);
+			this->lNume->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lNume->Name = L"lNume";
+			this->lNume->Size = System::Drawing::Size(69, 28);
+			this->lNume->TabIndex = 1;
+			this->lNume->Text = L"Nume";
 			// 
-			// l_Prenume
+			// lPrenume
 			// 
-			this->l_Prenume->AutoSize = true;
-			this->l_Prenume->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->l_Prenume->Location = System::Drawing::Point(46, 185);
-			this->l_Prenume->Name = L"l_Prenume";
-			this->l_Prenume->Size = System::Drawing::Size(73, 21);
-			this->l_Prenume->TabIndex = 2;
-			this->l_Prenume->Text = L"Prenume";
+			this->lPrenume->AutoSize = true;
+			this->lPrenume->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
+			this->lPrenume->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
+			this->lPrenume->Location = System::Drawing::Point(60, 200);
+			this->lPrenume->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lPrenume->Name = L"lPrenume";
+			this->lPrenume->Size = System::Drawing::Size(96, 28);
+			this->lPrenume->TabIndex = 2;
+			this->lPrenume->Text = L"Prenume";
 			// 
-			// l_Email
+			// lEmail
 			// 
-			this->l_Email->AutoSize = true;
-			this->l_Email->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->l_Email->Location = System::Drawing::Point(46, 220);
-			this->l_Email->Name = L"l_Email";
-			this->l_Email->Size = System::Drawing::Size(48, 21);
-			this->l_Email->TabIndex = 3;
-			this->l_Email->Text = L"Email";
+			this->lEmail->AutoSize = true;
+			this->lEmail->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
+			this->lEmail->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
+			this->lEmail->Location = System::Drawing::Point(60, 250);
+			this->lEmail->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lEmail->Name = L"lEmail";
+			this->lEmail->Size = System::Drawing::Size(64, 28);
+			this->lEmail->TabIndex = 3;
+			this->lEmail->Text = L"Email";
 			// 
-			// l_Parola
+			// lParola
 			// 
-			this->l_Parola->AutoSize = true;
-			this->l_Parola->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->l_Parola->Location = System::Drawing::Point(46, 250);
-			this->l_Parola->Name = L"l_Parola";
-			this->l_Parola->Size = System::Drawing::Size(53, 21);
-			this->l_Parola->TabIndex = 4;
-			this->l_Parola->Text = L"Parola";
-			this->l_Parola->Click += gcnew System::EventHandler(this, &Register::l_Parola_Click);
+			this->lParola->AutoSize = true;
+			this->lParola->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
+			this->lParola->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
+			this->lParola->Location = System::Drawing::Point(60, 300);
+			this->lParola->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lParola->Name = L"lParola";
+			this->lParola->Size = System::Drawing::Size(72, 28);
+			this->lParola->TabIndex = 4;
+			this->lParola->Text = L"Parola";
+			this->lParola->Click += gcnew System::EventHandler(this, &Register::l_Parola_Click);
 			// 
-			// l_Data_n
+			// lDataNasterii
 			// 
-			this->l_Data_n->AutoSize = true;
-			this->l_Data_n->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->l_Data_n->Location = System::Drawing::Point(46, 324);
-			this->l_Data_n->Name = L"l_Data_n";
-			this->l_Data_n->Size = System::Drawing::Size(97, 21);
-			this->l_Data_n->TabIndex = 5;
-			this->l_Data_n->Text = L"Data nasterii";
+			this->lDataNasterii->AutoSize = true;
+			this->lDataNasterii->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
+			this->lDataNasterii->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
+				static_cast<System::Int32>(static_cast<System::Byte>(43)));
+			this->lDataNasterii->Location = System::Drawing::Point(60, 400);
+			this->lDataNasterii->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lDataNasterii->Name = L"lDataNasterii";
+			this->lDataNasterii->Size = System::Drawing::Size(134, 28);
+			this->lDataNasterii->TabIndex = 5;
+			this->lDataNasterii->Text = L"Data nasterii";
+			// 
+			// tbNume
+			// 
+			this->tbNume->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->tbNume->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->tbNume->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->tbNume->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10));
+			this->tbNume->Location = System::Drawing::Point(155, 150);
+			this->tbNume->Margin = System::Windows::Forms::Padding(4);
+			this->tbNume->Name = L"tbNume";
+			this->tbNume->Size = System::Drawing::Size(387, 30);
+			this->tbNume->TabIndex = 6;
+			// 
+			// tbPrenume
+			// 
+			this->tbPrenume->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->tbPrenume->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->tbPrenume->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->tbPrenume->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10));
+			this->tbPrenume->Location = System::Drawing::Point(155, 200);
+			this->tbPrenume->Margin = System::Windows::Forms::Padding(4);
+			this->tbPrenume->Name = L"tbPrenume";
+			this->tbPrenume->Size = System::Drawing::Size(387, 30);
+			this->tbPrenume->TabIndex = 7;
 			// 
 			// tbEmail
 			// 
 			this->tbEmail->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->tbEmail->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->tbEmail->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->tbEmail->Location = System::Drawing::Point(121, 151);
+			this->tbEmail->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10));
+			this->tbEmail->Location = System::Drawing::Point(155, 250);
+			this->tbEmail->Margin = System::Windows::Forms::Padding(4);
 			this->tbEmail->Name = L"tbEmail";
-			this->tbEmail->Size = System::Drawing::Size(291, 20);
-			this->tbEmail->TabIndex = 6;
+			this->tbEmail->Size = System::Drawing::Size(387, 30);
+			this->tbEmail->TabIndex = 8;
 			// 
-			// textBox1
+			// tbParola
 			// 
-			this->textBox1->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->textBox1->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox1->Location = System::Drawing::Point(121, 186);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(291, 20);
-			this->textBox1->TabIndex = 7;
+			this->tbParola->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->tbParola->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->tbParola->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->tbParola->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10));
+			this->tbParola->Location = System::Drawing::Point(155, 300);
+			this->tbParola->Margin = System::Windows::Forms::Padding(4);
+			this->tbParola->Name = L"tbParola";
+			this->tbParola->Size = System::Drawing::Size(387, 30);
+			this->tbParola->TabIndex = 9;
 			// 
-			// textBox2
+			// dateTimePicker_DataNasterii
 			// 
-			this->textBox2->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->textBox2->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox2->Location = System::Drawing::Point(121, 221);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(291, 20);
-			this->textBox2->TabIndex = 8;
-			// 
-			// textBox3
-			// 
-			this->textBox3->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->textBox3->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox3->Location = System::Drawing::Point(121, 250);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(291, 20);
-			this->textBox3->TabIndex = 9;
-			// 
-			// dateTimePicker1
-			// 
-			this->dateTimePicker1->Location = System::Drawing::Point(168, 325);
-			this->dateTimePicker1->MaxDate = System::DateTime(2007, 1, 1, 0, 0, 0, 0);
-			this->dateTimePicker1->MinDate = System::DateTime(1900, 1, 1, 0, 0, 0, 0);
-			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(200, 20);
-			this->dateTimePicker1->TabIndex = 10;
-			this->dateTimePicker1->Value = System::DateTime(2007, 1, 1, 0, 0, 0, 0);
+			this->dateTimePicker_DataNasterii->Font = (gcnew System::Drawing::Font(L"Segoe UI", 7.8F));
+			this->dateTimePicker_DataNasterii->Location = System::Drawing::Point(224, 405);
+			this->dateTimePicker_DataNasterii->Margin = System::Windows::Forms::Padding(4);
+			this->dateTimePicker_DataNasterii->MaxDate = System::DateTime(2007, 1, 1, 0, 0, 0, 0);
+			this->dateTimePicker_DataNasterii->MinDate = System::DateTime(1900, 1, 1, 0, 0, 0, 0);
+			this->dateTimePicker_DataNasterii->Name = L"dateTimePicker_DataNasterii";
+			this->dateTimePicker_DataNasterii->Size = System::Drawing::Size(265, 25);
+			this->dateTimePicker_DataNasterii->TabIndex = 10;
+			this->dateTimePicker_DataNasterii->Value = System::DateTime(2007, 1, 1, 0, 0, 0, 0);
 			// 
 			// btnOk
 			// 
@@ -202,11 +236,11 @@ namespace BankingSystem {
 				static_cast<System::Int32>(static_cast<System::Byte>(79)));
 			this->btnOk->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnOk->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
-				static_cast<System::Int32>(static_cast<System::Byte>(43)));
-			this->btnOk->Location = System::Drawing::Point(50, 369);
+			this->btnOk->ForeColor = System::Drawing::Color::Black;
+			this->btnOk->Location = System::Drawing::Point(61, 472);
+			this->btnOk->Margin = System::Windows::Forms::Padding(4);
 			this->btnOk->Name = L"btnOk";
-			this->btnOk->Size = System::Drawing::Size(105, 57);
+			this->btnOk->Size = System::Drawing::Size(140, 70);
 			this->btnOk->TabIndex = 11;
 			this->btnOk->Text = L"OK";
 			this->btnOk->UseVisualStyleBackColor = false;
@@ -214,38 +248,39 @@ namespace BankingSystem {
 			// btnCancel
 			// 
 			this->btnCancel->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->btnCancel->BackColor = System::Drawing::Color::Chocolate;
+			this->btnCancel->BackColor = System::Drawing::Color::Salmon;
 			this->btnCancel->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnCancel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
-				static_cast<System::Int32>(static_cast<System::Byte>(43)));
-			this->btnCancel->Location = System::Drawing::Point(307, 369);
+			this->btnCancel->ForeColor = System::Drawing::Color::Black;
+			this->btnCancel->Location = System::Drawing::Point(403, 472);
+			this->btnCancel->Margin = System::Windows::Forms::Padding(4);
 			this->btnCancel->Name = L"btnCancel";
-			this->btnCancel->Size = System::Drawing::Size(105, 57);
+			this->btnCancel->Size = System::Drawing::Size(140, 70);
 			this->btnCancel->TabIndex = 12;
 			this->btnCancel->Text = L"Cancel";
 			this->btnCancel->UseVisualStyleBackColor = false;
 			// 
 			// Register
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
 				static_cast<System::Int32>(static_cast<System::Byte>(184)));
-			this->ClientSize = System::Drawing::Size(484, 461);
+			this->ClientSize = System::Drawing::Size(632, 603);
 			this->Controls->Add(this->btnCancel);
 			this->Controls->Add(this->btnOk);
-			this->Controls->Add(this->dateTimePicker1);
-			this->Controls->Add(this->textBox3);
-			this->Controls->Add(this->textBox2);
-			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->dateTimePicker_DataNasterii);
+			this->Controls->Add(this->tbParola);
 			this->Controls->Add(this->tbEmail);
-			this->Controls->Add(this->l_Data_n);
-			this->Controls->Add(this->l_Parola);
-			this->Controls->Add(this->l_Email);
-			this->Controls->Add(this->l_Prenume);
-			this->Controls->Add(this->l_Nume);
-			this->Controls->Add(this->l_Register);
+			this->Controls->Add(this->tbPrenume);
+			this->Controls->Add(this->tbNume);
+			this->Controls->Add(this->lDataNasterii);
+			this->Controls->Add(this->lParola);
+			this->Controls->Add(this->lEmail);
+			this->Controls->Add(this->lPrenume);
+			this->Controls->Add(this->lNume);
+			this->Controls->Add(this->lRegister);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Register";
 			this->Text = L"Register";
 			this->ResumeLayout(false);

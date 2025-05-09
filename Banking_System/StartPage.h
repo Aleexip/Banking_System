@@ -34,10 +34,15 @@ namespace BankingSystem {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^ lWelcome;
-	private: System::Windows::Forms::Button^ btnR;
-	private: System::Windows::Forms::Button^ btnL;
-	private: System::Windows::Forms::PictureBox^ pictureBox1;
+	private: System::Windows::Forms::Label^ lWelcomeB;
+	private: System::Windows::Forms::Button^ btnRegister;
+	private: System::Windows::Forms::Button^ btnLog_in;
+	protected:
+
+
+
+	private: System::Windows::Forms::PictureBox^ pctbLogo_Start;
+
 	protected:
 
 	protected:
@@ -60,82 +65,87 @@ namespace BankingSystem {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
-			this->lWelcome = (gcnew System::Windows::Forms::Label());
-			this->btnR = (gcnew System::Windows::Forms::Button());
-			this->btnL = (gcnew System::Windows::Forms::Button());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			this->lWelcomeB = (gcnew System::Windows::Forms::Label());
+			this->btnRegister = (gcnew System::Windows::Forms::Button());
+			this->btnLog_in = (gcnew System::Windows::Forms::Button());
+			this->pctbLogo_Start = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pctbLogo_Start))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// lWelcome
+			// lWelcomeB
 			// 
-			this->lWelcome->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->lWelcomeB->Font = (gcnew System::Drawing::Font(L"Segoe UI", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->lWelcome->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(62)), static_cast<System::Int32>(static_cast<System::Byte>(39)),
+			this->lWelcomeB->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(62)), static_cast<System::Int32>(static_cast<System::Byte>(39)),
 				static_cast<System::Int32>(static_cast<System::Byte>(35)));
-			this->lWelcome->Location = System::Drawing::Point(160, 49);
-			this->lWelcome->Name = L"lWelcome";
-			this->lWelcome->Size = System::Drawing::Size(160, 78);
-			this->lWelcome->TabIndex = 0;
-			this->lWelcome->Text = L"WELCOME BACK!";
-			this->lWelcome->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->lWelcome->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
+			this->lWelcomeB->Location = System::Drawing::Point(225, 204);
+			this->lWelcomeB->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lWelcomeB->Name = L"lWelcomeB";
+			this->lWelcomeB->Size = System::Drawing::Size(200, 100);
+			this->lWelcomeB->TabIndex = 0;
+			this->lWelcomeB->Text = L"WELCOME BACK!";
+			this->lWelcomeB->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->lWelcomeB->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
 			// 
-			// btnR
+			// btnRegister
 			// 
-			this->btnR->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(78)), static_cast<System::Int32>(static_cast<System::Byte>(148)),
+			this->btnRegister->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(78)), static_cast<System::Int32>(static_cast<System::Byte>(148)),
 				static_cast<System::Int32>(static_cast<System::Byte>(79)));
-			this->btnR->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btnRegister->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnR->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
-				static_cast<System::Int32>(static_cast<System::Byte>(43)));
-			this->btnR->Location = System::Drawing::Point(75, 327);
-			this->btnR->Name = L"btnR";
-			this->btnR->Size = System::Drawing::Size(100, 50);
-			this->btnR->TabIndex = 1;
-			this->btnR->Text = L"Register";
-			this->btnR->UseVisualStyleBackColor = false;
-			this->btnR->Click += gcnew System::EventHandler(this, &MyForm::btnR_Click);
+			this->btnRegister->ForeColor = System::Drawing::Color::Black;
+			this->btnRegister->Location = System::Drawing::Point(80, 400);
+			this->btnRegister->Margin = System::Windows::Forms::Padding(4);
+			this->btnRegister->Name = L"btnRegister";
+			this->btnRegister->Size = System::Drawing::Size(130, 60);
+			this->btnRegister->TabIndex = 1;
+			this->btnRegister->Text = L"Register";
+			this->btnRegister->UseVisualStyleBackColor = false;
+			this->btnRegister->Click += gcnew System::EventHandler(this, &MyForm::btnR_Click);
 			// 
-			// btnL
+			// btnLog_in
 			// 
-			this->btnL->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(78)), static_cast<System::Int32>(static_cast<System::Byte>(148)),
+			this->btnLog_in->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(78)), static_cast<System::Int32>(static_cast<System::Byte>(148)),
 				static_cast<System::Int32>(static_cast<System::Byte>(79)));
-			this->btnL->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btnLog_in->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnL->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
-				static_cast<System::Int32>(static_cast<System::Byte>(43)));
-			this->btnL->Location = System::Drawing::Point(310, 327);
-			this->btnL->Name = L"btnL";
-			this->btnL->Size = System::Drawing::Size(100, 50);
-			this->btnL->TabIndex = 2;
-			this->btnL->Text = L"Login";
-			this->btnL->UseVisualStyleBackColor = false;
+			this->btnLog_in->ForeColor = System::Drawing::Color::Black;
+			this->btnLog_in->Location = System::Drawing::Point(410, 400);
+			this->btnLog_in->Margin = System::Windows::Forms::Padding(4);
+			this->btnLog_in->Name = L"btnLog_in";
+			this->btnLog_in->Size = System::Drawing::Size(130, 60);
+			this->btnLog_in->TabIndex = 2;
+			this->btnLog_in->Text = L"Login";
+			this->btnLog_in->UseVisualStyleBackColor = false;
 			// 
-			// pictureBox1
+			// pctbLogo_Start
 			// 
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(154, 156);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(175, 136);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox1->TabIndex = 3;
-			this->pictureBox1->TabStop = false;
+			this->pctbLogo_Start->BackColor = System::Drawing::Color::BlanchedAlmond;
+			this->pctbLogo_Start->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->pctbLogo_Start->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pctbLogo_Start.Image")));
+			this->pctbLogo_Start->Location = System::Drawing::Point(225, 100);
+			this->pctbLogo_Start->Margin = System::Windows::Forms::Padding(4);
+			this->pctbLogo_Start->Name = L"pctbLogo_Start";
+			this->pctbLogo_Start->Size = System::Drawing::Size(200, 100);
+			this->pctbLogo_Start->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pctbLogo_Start->TabIndex = 3;
+			this->pctbLogo_Start->TabStop = false;
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
 				static_cast<System::Int32>(static_cast<System::Byte>(184)));
-			this->ClientSize = System::Drawing::Size(484, 461);
-			this->Controls->Add(this->pictureBox1);
-			this->Controls->Add(this->btnL);
-			this->Controls->Add(this->btnR);
-			this->Controls->Add(this->lWelcome);
+			this->ClientSize = System::Drawing::Size(632, 603);
+			this->Controls->Add(this->pctbLogo_Start);
+			this->Controls->Add(this->btnLog_in);
+			this->Controls->Add(this->btnRegister);
+			this->Controls->Add(this->lWelcomeB);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pctbLogo_Start))->EndInit();
 			this->ResumeLayout(false);
 
 		}
