@@ -90,10 +90,9 @@ namespace BankingSystem {
 			this->lTitle->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
 				static_cast<System::Int32>(static_cast<System::Byte>(43)));
 			this->lTitle->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->lTitle->Location = System::Drawing::Point(300, 50);
-			this->lTitle->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lTitle->Location = System::Drawing::Point(225, 41);
 			this->lTitle->Name = L"lTitle";
-			this->lTitle->Size = System::Drawing::Size(200, 65);
+			this->lTitle->Size = System::Drawing::Size(150, 53);
 			this->lTitle->TabIndex = 0;
 			this->lTitle->Text = L"Login";
 			this->lTitle->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -108,10 +107,9 @@ namespace BankingSystem {
 			this->lEmail->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
 				static_cast<System::Int32>(static_cast<System::Byte>(43)));
 			this->lEmail->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->lEmail->Location = System::Drawing::Point(47, 216);
-			this->lEmail->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lEmail->Location = System::Drawing::Point(35, 176);
 			this->lEmail->Name = L"lEmail";
-			this->lEmail->Size = System::Drawing::Size(125, 46);
+			this->lEmail->Size = System::Drawing::Size(94, 37);
 			this->lEmail->TabIndex = 1;
 			this->lEmail->Text = L"Email";
 			this->lEmail->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -123,10 +121,9 @@ namespace BankingSystem {
 			this->tbEmail->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->tbEmail->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->tbEmail->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10));
-			this->tbEmail->Location = System::Drawing::Point(217, 221);
-			this->tbEmail->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->tbEmail->Location = System::Drawing::Point(163, 180);
 			this->tbEmail->Name = L"tbEmail";
-			this->tbEmail->Size = System::Drawing::Size(462, 30);
+			this->tbEmail->Size = System::Drawing::Size(347, 25);
 			this->tbEmail->TabIndex = 2;
 			this->tbEmail->TextChanged += gcnew System::EventHandler(this, &LoginForm::tbEmail_TextChanged);
 			// 
@@ -139,10 +136,9 @@ namespace BankingSystem {
 				static_cast<System::Byte>(0)));
 			this->lPassword->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
 				static_cast<System::Int32>(static_cast<System::Byte>(43)));
-			this->lPassword->Location = System::Drawing::Point(47, 296);
-			this->lPassword->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lPassword->Location = System::Drawing::Point(35, 240);
 			this->lPassword->Name = L"lPassword";
-			this->lPassword->Size = System::Drawing::Size(125, 46);
+			this->lPassword->Size = System::Drawing::Size(94, 37);
 			this->lPassword->TabIndex = 3;
 			this->lPassword->Text = L"Password";
 			this->lPassword->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -154,11 +150,10 @@ namespace BankingSystem {
 			this->tbPassword->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->tbPassword->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->tbPassword->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10));
-			this->tbPassword->Location = System::Drawing::Point(217, 301);
-			this->tbPassword->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->tbPassword->Location = System::Drawing::Point(163, 245);
 			this->tbPassword->Name = L"tbPassword";
 			this->tbPassword->PasswordChar = '*';
-			this->tbPassword->Size = System::Drawing::Size(462, 30);
+			this->tbPassword->Size = System::Drawing::Size(347, 25);
 			this->tbPassword->TabIndex = 4;
 			// 
 			// btnCancel
@@ -169,10 +164,9 @@ namespace BankingSystem {
 				static_cast<System::Byte>(0)));
 			this->btnCancel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
 				static_cast<System::Int32>(static_cast<System::Byte>(43)));
-			this->btnCancel->Location = System::Drawing::Point(496, 480);
-			this->btnCancel->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnCancel->Location = System::Drawing::Point(372, 390);
 			this->btnCancel->Name = L"btnCancel";
-			this->btnCancel->Size = System::Drawing::Size(140, 70);
+			this->btnCancel->Size = System::Drawing::Size(105, 57);
 			this->btnCancel->TabIndex = 6;
 			this->btnCancel->Text = L"Cancel";
 			this->btnCancel->UseVisualStyleBackColor = false;
@@ -187,10 +181,9 @@ namespace BankingSystem {
 				static_cast<System::Byte>(0)));
 			this->btnOk->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
 				static_cast<System::Int32>(static_cast<System::Byte>(43)));
-			this->btnOk->Location = System::Drawing::Point(148, 480);
-			this->btnOk->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btnOk->Location = System::Drawing::Point(111, 390);
 			this->btnOk->Name = L"btnOk";
-			this->btnOk->Size = System::Drawing::Size(140, 70);
+			this->btnOk->Size = System::Drawing::Size(105, 57);
 			this->btnOk->TabIndex = 7;
 			this->btnOk->Text = L"OK";
 			this->btnOk->UseVisualStyleBackColor = false;
@@ -200,23 +193,24 @@ namespace BankingSystem {
 			// 
 			this->pctbLogo_Start->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
 				static_cast<System::Int32>(static_cast<System::Byte>(184)));
+			this->pctbLogo_Start->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->pctbLogo_Start->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pctbLogo_Start.Image")));
-			this->pctbLogo_Start->Location = System::Drawing::Point(310, 120);
-			this->pctbLogo_Start->Margin = System::Windows::Forms::Padding(4);
+			this->pctbLogo_Start->Location = System::Drawing::Point(232, 98);
 			this->pctbLogo_Start->Name = L"pctbLogo_Start";
-			this->pctbLogo_Start->Size = System::Drawing::Size(180, 80);
+			this->pctbLogo_Start->Size = System::Drawing::Size(135, 65);
 			this->pctbLogo_Start->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pctbLogo_Start->TabIndex = 8;
 			this->pctbLogo_Start->TabStop = false;
+			this->pctbLogo_Start->WaitOnLoad = true;
 			// 
 			// LoginForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoSize = true;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
 				static_cast<System::Int32>(static_cast<System::Byte>(184)));
-			this->ClientSize = System::Drawing::Size(782, 613);
+			this->ClientSize = System::Drawing::Size(586, 498);
 			this->Controls->Add(this->btnOk);
 			this->Controls->Add(this->btnCancel);
 			this->Controls->Add(this->tbPassword);
@@ -225,10 +219,9 @@ namespace BankingSystem {
 			this->Controls->Add(this->lEmail);
 			this->Controls->Add(this->lTitle);
 			this->Controls->Add(this->pctbLogo_Start);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"LoginForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"LoginForm";
+			this->Text = L"Login";
 			this->Load += gcnew System::EventHandler(this, &LoginForm::LoginForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pctbLogo_Start))->EndInit();
 			this->ResumeLayout(false);

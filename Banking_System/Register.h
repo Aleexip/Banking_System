@@ -96,12 +96,12 @@ namespace BankingSystem {
 				static_cast<System::Byte>(0)));
 			this->lRegister->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
 				static_cast<System::Int32>(static_cast<System::Byte>(43)));
-			this->lRegister->Location = System::Drawing::Point(225, 50);
-			this->lRegister->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lRegister->Location = System::Drawing::Point(160, 38);
 			this->lRegister->Name = L"lRegister";
-			this->lRegister->Size = System::Drawing::Size(200, 75);
+			this->lRegister->Size = System::Drawing::Size(158, 65);
 			this->lRegister->TabIndex = 0;
 			this->lRegister->Text = L"Register";
+			this->lRegister->Click += gcnew System::EventHandler(this, &Register::lRegister_Click);
 			// 
 			// lNume
 			// 
@@ -109,10 +109,9 @@ namespace BankingSystem {
 			this->lNume->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
 			this->lNume->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
 				static_cast<System::Int32>(static_cast<System::Byte>(43)));
-			this->lNume->Location = System::Drawing::Point(60, 150);
-			this->lNume->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lNume->Location = System::Drawing::Point(45, 122);
 			this->lNume->Name = L"lNume";
-			this->lNume->Size = System::Drawing::Size(69, 28);
+			this->lNume->Size = System::Drawing::Size(57, 21);
 			this->lNume->TabIndex = 1;
 			this->lNume->Text = L"Nume";
 			// 
@@ -122,10 +121,9 @@ namespace BankingSystem {
 			this->lPrenume->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
 			this->lPrenume->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
 				static_cast<System::Int32>(static_cast<System::Byte>(43)));
-			this->lPrenume->Location = System::Drawing::Point(60, 200);
-			this->lPrenume->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lPrenume->Location = System::Drawing::Point(45, 162);
 			this->lPrenume->Name = L"lPrenume";
-			this->lPrenume->Size = System::Drawing::Size(96, 28);
+			this->lPrenume->Size = System::Drawing::Size(79, 21);
 			this->lPrenume->TabIndex = 2;
 			this->lPrenume->Text = L"Prenume";
 			// 
@@ -135,10 +133,9 @@ namespace BankingSystem {
 			this->lEmail->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
 			this->lEmail->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
 				static_cast<System::Int32>(static_cast<System::Byte>(43)));
-			this->lEmail->Location = System::Drawing::Point(60, 250);
-			this->lEmail->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lEmail->Location = System::Drawing::Point(45, 203);
 			this->lEmail->Name = L"lEmail";
-			this->lEmail->Size = System::Drawing::Size(64, 28);
+			this->lEmail->Size = System::Drawing::Size(53, 21);
 			this->lEmail->TabIndex = 3;
 			this->lEmail->Text = L"Email";
 			// 
@@ -148,10 +145,9 @@ namespace BankingSystem {
 			this->lParola->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
 			this->lParola->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
 				static_cast<System::Int32>(static_cast<System::Byte>(43)));
-			this->lParola->Location = System::Drawing::Point(60, 300);
-			this->lParola->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lParola->Location = System::Drawing::Point(45, 244);
 			this->lParola->Name = L"lParola";
-			this->lParola->Size = System::Drawing::Size(72, 28);
+			this->lParola->Size = System::Drawing::Size(59, 21);
 			this->lParola->TabIndex = 4;
 			this->lParola->Text = L"Parola";
 			this->lParola->Click += gcnew System::EventHandler(this, &Register::l_Parola_Click);
@@ -162,10 +158,9 @@ namespace BankingSystem {
 			this->lDataNasterii->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
 			this->lDataNasterii->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
 				static_cast<System::Int32>(static_cast<System::Byte>(43)));
-			this->lDataNasterii->Location = System::Drawing::Point(60, 400);
-			this->lDataNasterii->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lDataNasterii->Location = System::Drawing::Point(45, 325);
 			this->lDataNasterii->Name = L"lDataNasterii";
-			this->lDataNasterii->Size = System::Drawing::Size(134, 28);
+			this->lDataNasterii->Size = System::Drawing::Size(107, 21);
 			this->lDataNasterii->TabIndex = 5;
 			this->lDataNasterii->Text = L"Data nasterii";
 			// 
@@ -175,10 +170,9 @@ namespace BankingSystem {
 			this->tbNume->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->tbNume->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->tbNume->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10));
-			this->tbNume->Location = System::Drawing::Point(155, 150);
-			this->tbNume->Margin = System::Windows::Forms::Padding(4);
+			this->tbNume->Location = System::Drawing::Point(116, 122);
 			this->tbNume->Name = L"tbNume";
-			this->tbNume->Size = System::Drawing::Size(387, 30);
+			this->tbNume->Size = System::Drawing::Size(291, 25);
 			this->tbNume->TabIndex = 6;
 			// 
 			// tbPrenume
@@ -187,10 +181,9 @@ namespace BankingSystem {
 			this->tbPrenume->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->tbPrenume->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->tbPrenume->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10));
-			this->tbPrenume->Location = System::Drawing::Point(155, 200);
-			this->tbPrenume->Margin = System::Windows::Forms::Padding(4);
+			this->tbPrenume->Location = System::Drawing::Point(116, 162);
 			this->tbPrenume->Name = L"tbPrenume";
-			this->tbPrenume->Size = System::Drawing::Size(387, 30);
+			this->tbPrenume->Size = System::Drawing::Size(291, 25);
 			this->tbPrenume->TabIndex = 7;
 			// 
 			// tbEmail
@@ -199,10 +192,9 @@ namespace BankingSystem {
 			this->tbEmail->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->tbEmail->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->tbEmail->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10));
-			this->tbEmail->Location = System::Drawing::Point(155, 250);
-			this->tbEmail->Margin = System::Windows::Forms::Padding(4);
+			this->tbEmail->Location = System::Drawing::Point(116, 203);
 			this->tbEmail->Name = L"tbEmail";
-			this->tbEmail->Size = System::Drawing::Size(387, 30);
+			this->tbEmail->Size = System::Drawing::Size(291, 25);
 			this->tbEmail->TabIndex = 8;
 			// 
 			// tbParola
@@ -211,21 +203,19 @@ namespace BankingSystem {
 			this->tbParola->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->tbParola->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->tbParola->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10));
-			this->tbParola->Location = System::Drawing::Point(155, 300);
-			this->tbParola->Margin = System::Windows::Forms::Padding(4);
+			this->tbParola->Location = System::Drawing::Point(116, 244);
 			this->tbParola->Name = L"tbParola";
-			this->tbParola->Size = System::Drawing::Size(387, 30);
+			this->tbParola->Size = System::Drawing::Size(291, 25);
 			this->tbParola->TabIndex = 9;
 			// 
 			// dateTimePicker_DataNasterii
 			// 
 			this->dateTimePicker_DataNasterii->Font = (gcnew System::Drawing::Font(L"Segoe UI", 7.8F));
-			this->dateTimePicker_DataNasterii->Location = System::Drawing::Point(224, 405);
-			this->dateTimePicker_DataNasterii->Margin = System::Windows::Forms::Padding(4);
+			this->dateTimePicker_DataNasterii->Location = System::Drawing::Point(168, 329);
 			this->dateTimePicker_DataNasterii->MaxDate = System::DateTime(2007, 1, 1, 0, 0, 0, 0);
 			this->dateTimePicker_DataNasterii->MinDate = System::DateTime(1900, 1, 1, 0, 0, 0, 0);
 			this->dateTimePicker_DataNasterii->Name = L"dateTimePicker_DataNasterii";
-			this->dateTimePicker_DataNasterii->Size = System::Drawing::Size(265, 25);
+			this->dateTimePicker_DataNasterii->Size = System::Drawing::Size(200, 21);
 			this->dateTimePicker_DataNasterii->TabIndex = 10;
 			this->dateTimePicker_DataNasterii->Value = System::DateTime(2007, 1, 1, 0, 0, 0, 0);
 			// 
@@ -237,10 +227,9 @@ namespace BankingSystem {
 			this->btnOk->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnOk->ForeColor = System::Drawing::Color::Black;
-			this->btnOk->Location = System::Drawing::Point(61, 472);
-			this->btnOk->Margin = System::Windows::Forms::Padding(4);
+			this->btnOk->Location = System::Drawing::Point(46, 384);
 			this->btnOk->Name = L"btnOk";
-			this->btnOk->Size = System::Drawing::Size(140, 70);
+			this->btnOk->Size = System::Drawing::Size(105, 57);
 			this->btnOk->TabIndex = 11;
 			this->btnOk->Text = L"OK";
 			this->btnOk->UseVisualStyleBackColor = false;
@@ -252,21 +241,20 @@ namespace BankingSystem {
 			this->btnCancel->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnCancel->ForeColor = System::Drawing::Color::Black;
-			this->btnCancel->Location = System::Drawing::Point(403, 472);
-			this->btnCancel->Margin = System::Windows::Forms::Padding(4);
+			this->btnCancel->Location = System::Drawing::Point(302, 384);
 			this->btnCancel->Name = L"btnCancel";
-			this->btnCancel->Size = System::Drawing::Size(140, 70);
+			this->btnCancel->Size = System::Drawing::Size(105, 57);
 			this->btnCancel->TabIndex = 12;
 			this->btnCancel->Text = L"Cancel";
 			this->btnCancel->UseVisualStyleBackColor = false;
 			// 
 			// Register
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
 				static_cast<System::Int32>(static_cast<System::Byte>(184)));
-			this->ClientSize = System::Drawing::Size(632, 603);
+			this->ClientSize = System::Drawing::Size(474, 490);
 			this->Controls->Add(this->btnCancel);
 			this->Controls->Add(this->btnOk);
 			this->Controls->Add(this->dateTimePicker_DataNasterii);
@@ -280,7 +268,6 @@ namespace BankingSystem {
 			this->Controls->Add(this->lPrenume);
 			this->Controls->Add(this->lNume);
 			this->Controls->Add(this->lRegister);
-			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"Register";
 			this->Text = L"Register";
 			this->ResumeLayout(false);
@@ -290,5 +277,7 @@ namespace BankingSystem {
 #pragma endregion
 	private: System::Void l_Parola_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void lRegister_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

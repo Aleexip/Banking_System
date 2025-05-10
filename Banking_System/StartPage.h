@@ -78,10 +78,9 @@ namespace BankingSystem {
 				static_cast<System::Byte>(0)));
 			this->lWelcomeB->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(62)), static_cast<System::Int32>(static_cast<System::Byte>(39)),
 				static_cast<System::Int32>(static_cast<System::Byte>(35)));
-			this->lWelcomeB->Location = System::Drawing::Point(225, 204);
-			this->lWelcomeB->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->lWelcomeB->Location = System::Drawing::Point(169, 166);
 			this->lWelcomeB->Name = L"lWelcomeB";
-			this->lWelcomeB->Size = System::Drawing::Size(200, 100);
+			this->lWelcomeB->Size = System::Drawing::Size(150, 81);
 			this->lWelcomeB->TabIndex = 0;
 			this->lWelcomeB->Text = L"WELCOME BACK!";
 			this->lWelcomeB->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -94,10 +93,9 @@ namespace BankingSystem {
 			this->btnRegister->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnRegister->ForeColor = System::Drawing::Color::Black;
-			this->btnRegister->Location = System::Drawing::Point(80, 400);
-			this->btnRegister->Margin = System::Windows::Forms::Padding(4);
+			this->btnRegister->Location = System::Drawing::Point(60, 325);
 			this->btnRegister->Name = L"btnRegister";
-			this->btnRegister->Size = System::Drawing::Size(130, 60);
+			this->btnRegister->Size = System::Drawing::Size(98, 49);
 			this->btnRegister->TabIndex = 1;
 			this->btnRegister->Text = L"Register";
 			this->btnRegister->UseVisualStyleBackColor = false;
@@ -110,10 +108,9 @@ namespace BankingSystem {
 			this->btnLog_in->Font = (gcnew System::Drawing::Font(L"Segoe UI", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnLog_in->ForeColor = System::Drawing::Color::Black;
-			this->btnLog_in->Location = System::Drawing::Point(410, 400);
-			this->btnLog_in->Margin = System::Windows::Forms::Padding(4);
+			this->btnLog_in->Location = System::Drawing::Point(308, 325);
 			this->btnLog_in->Name = L"btnLog_in";
-			this->btnLog_in->Size = System::Drawing::Size(130, 60);
+			this->btnLog_in->Size = System::Drawing::Size(98, 49);
 			this->btnLog_in->TabIndex = 2;
 			this->btnLog_in->Text = L"Login";
 			this->btnLog_in->UseVisualStyleBackColor = false;
@@ -123,28 +120,26 @@ namespace BankingSystem {
 			this->pctbLogo_Start->BackColor = System::Drawing::Color::BlanchedAlmond;
 			this->pctbLogo_Start->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->pctbLogo_Start->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pctbLogo_Start.Image")));
-			this->pctbLogo_Start->Location = System::Drawing::Point(225, 100);
-			this->pctbLogo_Start->Margin = System::Windows::Forms::Padding(4);
+			this->pctbLogo_Start->Location = System::Drawing::Point(169, 81);
 			this->pctbLogo_Start->Name = L"pctbLogo_Start";
-			this->pctbLogo_Start->Size = System::Drawing::Size(200, 100);
+			this->pctbLogo_Start->Size = System::Drawing::Size(151, 82);
 			this->pctbLogo_Start->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pctbLogo_Start->TabIndex = 3;
 			this->pctbLogo_Start->TabStop = false;
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
 				static_cast<System::Int32>(static_cast<System::Byte>(184)));
-			this->ClientSize = System::Drawing::Size(632, 603);
+			this->ClientSize = System::Drawing::Size(474, 490);
 			this->Controls->Add(this->pctbLogo_Start);
 			this->Controls->Add(this->btnLog_in);
 			this->Controls->Add(this->btnRegister);
 			this->Controls->Add(this->lWelcomeB);
-			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->Text = L"ARD Bank";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pctbLogo_Start))->EndInit();
 			this->ResumeLayout(false);
 
