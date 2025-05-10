@@ -288,7 +288,7 @@ namespace BankingSystem {
 			// 
 			this->lCVC->BackColor = System::Drawing::Color::Wheat;
 			this->lCVC->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold));
-			this->lCVC->Location = System::Drawing::Point(544, 192);
+			this->lCVC->Location = System::Drawing::Point(561, 188);
 			this->lCVC->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->lCVC->Name = L"lCVC";
 			this->lCVC->Size = System::Drawing::Size(42, 20);

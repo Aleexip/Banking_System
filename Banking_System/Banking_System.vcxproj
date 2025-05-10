@@ -116,6 +116,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\sql\sqlite-amalgamation-3490100\sqlite3.c">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Default</CompileAs>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/clr- %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClCompile Include="Account.cpp" />
     <ClCompile Include="DatabaseHelper.cpp" />

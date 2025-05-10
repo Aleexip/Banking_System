@@ -205,7 +205,14 @@ namespace BankingSystem {
 	}
 	private: System::Void btnOk_Click(System::Object^ sender, System::EventArgs^ e) {
 
+		String^ email = tbEmail->Text;
+		String^ password = tbPassword->Text;
+
+
 		this->Hide(); // hide the current form
+
+
+		
 
 		// Ensure MainDashboard is recognized
 		MainDashboard^ mainDashboard = gcnew MainDashboard();

@@ -21,6 +21,7 @@ int main(array <String^>^ args)
 	//function calls to create database and tables
     createDB(dbPath.c_str()); 
     createTable(dbPath.c_str());
+    insertUser(dbPath.c_str());
 
 
 	//Graphical User Interface
@@ -29,5 +30,7 @@ int main(array <String^>^ args)
     BankingSystem::LoginForm loginForm;
     loginForm.ShowDialog();
  
+
+
     return 0;
 }
