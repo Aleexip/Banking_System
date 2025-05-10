@@ -78,7 +78,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\vadan\Desktop\sqlite-amalgamation-3490100</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Robert\Downloads\New folder\sqlite-amalgamation-3490100</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
@@ -114,8 +114,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\sql\sqlite-amalgamation-3490100\sqlite3.c">
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Default</CompileAs>
+    <ClCompile Include="..\..\..\..\Downloads\New folder\sqlite-amalgamation-3490100\sqlite3.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/clr- %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <ClCompile Include="Account.cpp" />
@@ -123,6 +122,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="LoginForm.cpp" />
     <ClCompile Include="MainDashboard.cpp" />
+    <ClCompile Include="Register.cpp" />
     <ClCompile Include="TransactionHistory.cpp" />
     <ClCompile Include="TransferService.cpp" />
   </ItemGroup>
@@ -134,7 +134,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\sql\sqlite-amalgamation-3490100\sqlite3.h" />
+    <ClInclude Include="..\..\..\..\Downloads\New folder\sqlite-amalgamation-3490100\sqlite3.h" />
     <ClInclude Include="Account.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -143,6 +143,12 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MainDashboard.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Register.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="StartPage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="TransactionHistory.h">
@@ -161,6 +167,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainDashboard.resx">
       <DependentUpon>MainDashboard.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartPage.resx">
+      <DependentUpon>StartPage.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransactionHistory.resx">
       <DependentUpon>TransactionHistory.h</DependentUpon>
