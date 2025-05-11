@@ -70,7 +70,7 @@ namespace BankingSystem {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -99,36 +99,10 @@ namespace BankingSystem {
 				static_cast<System::Int32>(static_cast<System::Byte>(43)));
 			this->lRegister->Location = System::Drawing::Point(169, 41);
 			this->lRegister->Name = L"lRegister";
-			this->lRegister->Size = System::Drawing::Size(200, 75);
+			this->lRegister->Size = System::Drawing::Size(155, 47);
 			this->lRegister->TabIndex = 0;
 			this->lRegister->Text = L"Register";
 			this->lRegister->Click += gcnew System::EventHandler(this, &Register::lRegister_Click);
-			// 
-			// lNume
-			// 
-			this->lNume->AutoSize = true;
-			this->lNume->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
-			this->lNume->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
-				static_cast<System::Int32>(static_cast<System::Byte>(43)));
-			this->lNume->Location = System::Drawing::Point(60, 150);
-			this->lNume->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lNume->Name = L"lNume";
-			this->lNume->Size = System::Drawing::Size(69, 28);
-			this->lNume->TabIndex = 1;
-			this->lNume->Text = L"Nume";
-			// 
-			// lPrenume
-			// 
-			this->lPrenume->AutoSize = true;
-			this->lPrenume->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
-			this->lPrenume->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
-				static_cast<System::Int32>(static_cast<System::Byte>(43)));
-			this->lPrenume->Location = System::Drawing::Point(60, 200);
-			this->lPrenume->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->lPrenume->Name = L"lPrenume";
-			this->lPrenume->Size = System::Drawing::Size(96, 28);
-			this->lPrenume->TabIndex = 2;
-			this->lPrenume->Text = L"Prenume";
 			// 
 			// lEmail
 			// 
@@ -167,30 +141,6 @@ namespace BankingSystem {
 			this->lDataNasterii->TabIndex = 5;
 			this->lDataNasterii->Text = L"Data nasterii";
 			// 
-			// tbNume
-			// 
-			this->tbNume->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->tbNume->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->tbNume->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->tbNume->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10));
-			this->tbNume->Location = System::Drawing::Point(155, 150);
-			this->tbNume->Margin = System::Windows::Forms::Padding(4);
-			this->tbNume->Name = L"tbNume";
-			this->tbNume->Size = System::Drawing::Size(387, 30);
-			this->tbNume->TabIndex = 6;
-			// 
-			// tbPrenume
-			// 
-			this->tbPrenume->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->tbPrenume->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->tbPrenume->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->tbPrenume->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10));
-			this->tbPrenume->Location = System::Drawing::Point(155, 200);
-			this->tbPrenume->Margin = System::Windows::Forms::Padding(4);
-			this->tbPrenume->Name = L"tbPrenume";
-			this->tbPrenume->Size = System::Drawing::Size(387, 30);
-			this->tbPrenume->TabIndex = 7;
-			// 
 			// tbEmail
 			// 
 			this->tbEmail->Anchor = System::Windows::Forms::AnchorStyles::None;
@@ -210,15 +160,15 @@ namespace BankingSystem {
 			this->tbParola->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10));
 			this->tbParola->Location = System::Drawing::Point(116, 244);
 			this->tbParola->Name = L"tbParola";
-			this->tbParola->Size = System::Drawing::Size(387, 30);
+			this->tbParola->PasswordChar = '*';
+			this->tbParola->Size = System::Drawing::Size(291, 25);
 			this->tbParola->TabIndex = 9;
 			// 
 			// dateTimePicker_DataNasterii
 			// 
 			this->dateTimePicker_DataNasterii->Font = (gcnew System::Drawing::Font(L"Segoe UI", 7.8F));
-			this->dateTimePicker_DataNasterii->Location = System::Drawing::Point(224, 405);
-			this->dateTimePicker_DataNasterii->Margin = System::Windows::Forms::Padding(4);
-			this->dateTimePicker_DataNasterii->MaxDate = System::DateTime(2007, 1, 1, 0, 0, 0, 0);
+			this->dateTimePicker_DataNasterii->Location = System::Drawing::Point(168, 329);
+			this->dateTimePicker_DataNasterii->MaxDate = System::DateTime(2025, 5, 11, 0, 0, 0, 0);
 			this->dateTimePicker_DataNasterii->MinDate = System::DateTime(1900, 1, 1, 0, 0, 0, 0);
 			this->dateTimePicker_DataNasterii->Name = L"dateTimePicker_DataNasterii";
 			this->dateTimePicker_DataNasterii->Size = System::Drawing::Size(200, 21);
@@ -283,5 +233,97 @@ namespace BankingSystem {
 #pragma endregion
 	private: System::Void l_Parola_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-};
+	private: System::Void lRegister_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void Register_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void dateTimePicker_DataNasterii_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+
+	}
+	private: System::Void btnOk_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		DateTime selectedDate = dateTimePicker_DataNasterii->Value;
+		DateTime today = DateTime::Now;
+
+		int age = today.Year - selectedDate.Year;
+		if (selectedDate > today.AddYears(-age)) {
+			age--;
+		}
+
+		if (age < 18) {
+			MessageBox::Show("Access denied. You must be at least 18 years old.", "Age Restriction",
+				MessageBoxButtons::OK, MessageBoxIcon::Error);
+			return;
+		}
+
+		std::string email = msclr::interop::marshal_as<std::string>(tbEmail->Text);
+		std::string password = msclr::interop::marshal_as<std::string>(tbParola->Text);
+
+		sqlite3* DB;
+		sqlite3_stmt* stmt;
+		int rc;
+
+		std::string dbPath = "Files/ebanking.db";
+		rc = sqlite3_open(dbPath.c_str(), &DB);
+
+		if (rc) {
+			MessageBox::Show("Can't open database: " + gcnew String(sqlite3_errmsg(DB)), "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			return;
+		}
+
+		// Verificăm dacă emailul există deja
+		std::string sql = "SELECT 1 FROM USERS WHERE EMAIL = ?";
+		rc = sqlite3_prepare_v2(DB, sql.c_str(), -1, &stmt, nullptr);
+
+		if (rc != SQLITE_OK) {
+			MessageBox::Show("Failed to execute query.", "Query Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			sqlite3_close(DB);
+			return;
+		}
+
+		sqlite3_bind_text(stmt, 1, email.c_str(), -1, SQLITE_STATIC);
+		rc = sqlite3_step(stmt);
+
+		if (rc == SQLITE_ROW) {
+			// Email already exists
+			MessageBox::Show("This email is already registered.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			sqlite3_finalize(stmt);
+			sqlite3_close(DB);
+			return;
+		}
+		sqlite3_finalize(stmt); // închidem statement-ul de SELECT
+
+		// Email-ul nu există ⇒ Inserăm
+		const char* insertSql = "INSERT INTO USERS (EMAIL, PASSWORD) VALUES (?, ?)";
+		rc = sqlite3_prepare_v2(DB, insertSql, -1, &stmt, nullptr);
+
+		if (rc == SQLITE_OK) {
+			sqlite3_bind_text(stmt, 1, email.c_str(), -1, SQLITE_TRANSIENT);
+			sqlite3_bind_text(stmt, 2, password.c_str(), -1, SQLITE_TRANSIENT);
+
+			rc = sqlite3_step(stmt);
+			if (rc == SQLITE_DONE) {
+				MessageBox::Show("Email and password successfully registered!", "Success", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->Hide();
+
+
+				LoginForm^ loginForm = gcnew LoginForm();
+				loginForm->ShowDialog();
+
+				Application::Exit();
+			}
+			else {
+				MessageBox::Show("Failed to register user.", "Database Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		else {
+			MessageBox::Show("Failed to prepare insert statement.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+
+		sqlite3_finalize(stmt);
+		sqlite3_close(DB);
+
+	}
+	};
 }

@@ -246,13 +246,25 @@ namespace BankingSystem {
 		String^ password = tbPassword->Text;
 
 
-		this->Hide(); // hide the current form
+		//if (email->Length == 0 || password->Length == 0) {
+		//	MessageBox::Show("Please fill in all fields.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		//	return;
+		//}
 
-		// Ensure MainDashboard is recognized
-		MainDashboard^ mainDashboard = gcnew MainDashboard();
-		mainDashboard->ShowDialog(); // open dashboard as dialog
+		//// Check if the user exists in the database
 
-		
+		//if (checkUser(email, password)) {
+		//	MessageBox::Show("Login successful!", "Success", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		//	// Hide the current form
+		//	this->Hide();
+		//	// Show the main dashboard
+		//	MainDashboard^ mainDashboard = gcnew MainDashboard();
+		//	mainDashboard->ShowDialog(); // open dashboard as dialog
+		//}
+		//else {
+		//	MessageBox::Show("Invalid email or password.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		//}
+		//
 	}
 
 private: System::Void btnCancel_Click(System::Object^ sender, System::EventArgs^ e) {
