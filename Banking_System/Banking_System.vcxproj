@@ -117,7 +117,6 @@
     <ClCompile Include="..\..\sql\sqlite-amalgamation-3490100\sqlite3.c">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/clr- %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
-    <ClCompile Include="Account.cpp" />
     <ClCompile Include="DatabaseHelper.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="LoginForm.cpp" />
@@ -134,10 +133,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\sql\sqlite-amalgamation-3490100\sqlite3.h" />
+    <ClInclude Include="..\..\..\..\Downloads\New folder\sqlite-amalgamation-3490100\sqlite3.h" />
     <ClInclude Include="Account.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="C:\Users\vadan\Desktop\sqlite-amalgamation-3490100\sqlite3.h" />
     <ClInclude Include="DatabaseHelper.h" />
     <ClInclude Include="LoginForm.h">
       <FileType>CppForm</FileType>
