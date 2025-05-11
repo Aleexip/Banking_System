@@ -1,5 +1,4 @@
-﻿#include "LoginForm.h"
-#include "MainDashboard.h"
+﻿#include "StartPage.h"
 
 #include <string>
 #include <iostream>
@@ -11,7 +10,7 @@
 
 using namespace System;
 using namespace System::Windows::Forms;
-
+using namespace BankingSystem;
 
 int main(array <String^>^ args)
 {
@@ -27,9 +26,10 @@ int main(array <String^>^ args)
 	//Graphical User Interface
     Application::EnableVisualStyles();
     Application::SetCompatibleTextRenderingDefault(false);
-    BankingSystem::LoginForm loginForm;
-    loginForm.ShowDialog();
- 
+
+
+    BankingSystem::StartPage^ form = gcnew BankingSystem::StartPage();
+    Application::Run(form);
 
 
     return 0;

@@ -1,7 +1,8 @@
 ﻿#pragma once
-
 #include "MainDashboard.h"
 #include "Account.h"
+
+
 
 namespace BankingSystem {
 
@@ -254,19 +255,18 @@ namespace BankingSystem {
 
 		this->Hide(); // hide the current form
 
-
-		
-
 		// Ensure MainDashboard is recognized
 		MainDashboard^ mainDashboard = gcnew MainDashboard();
 		mainDashboard->ShowDialog(); // open dashboard as dialog
 
-		Application::Exit(); // close the application when the dashboard is closed
+		
 	}
 
 private: System::Void btnCancel_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	this->Close(); // close the login form
+	this->Hide(); // hide the current form
+
 }
+
 };
 }
