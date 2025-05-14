@@ -122,11 +122,11 @@ namespace BankingSystem {
 			this->lParola->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold));
 			this->lParola->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
 				static_cast<System::Int32>(static_cast<System::Byte>(43)));
-			this->lParola->Location = System::Drawing::Point(45, 244);
+			this->lParola->Location = System::Drawing::Point(28, 248);
 			this->lParola->Name = L"lParola";
-			this->lParola->Size = System::Drawing::Size(59, 21);
+			this->lParola->Size = System::Drawing::Size(82, 21);
 			this->lParola->TabIndex = 4;
-			this->lParola->Text = L"Parola";
+			this->lParola->Text = L"Password";
 			this->lParola->Click += gcnew System::EventHandler(this, &Register::l_Parola_Click);
 			// 
 			// lDataNasterii
@@ -139,7 +139,7 @@ namespace BankingSystem {
 			this->lDataNasterii->Name = L"lDataNasterii";
 			this->lDataNasterii->Size = System::Drawing::Size(107, 21);
 			this->lDataNasterii->TabIndex = 5;
-			this->lDataNasterii->Text = L"Data nasterii";
+			this->lDataNasterii->Text = L"Date of birth";
 			// 
 			// tbEmail
 			// 
@@ -205,6 +205,7 @@ namespace BankingSystem {
 			this->btnCancel->TabIndex = 12;
 			this->btnCancel->Text = L"Cancel";
 			this->btnCancel->UseVisualStyleBackColor = false;
+			this->btnCancel->Click += gcnew System::EventHandler(this, &Register::btnCancel_Click);
 			// 
 			// Register
 			// 
@@ -291,9 +292,9 @@ namespace BankingSystem {
 			sqlite3_close(DB);
 			return;
 		}
-		sqlite3_finalize(stmt); // închidem statement-ul de SELECT
+		sqlite3_finalize(stmt); 
 
-		// Email-ul nu există ⇒ Inserăm
+		
 		const char* insertSql = "INSERT INTO USERS (EMAIL, PASSWORD) VALUES (?, ?)";
 		rc = sqlite3_prepare_v2(DB, insertSql, -1, &stmt, nullptr);
 
@@ -325,5 +326,9 @@ namespace BankingSystem {
 		sqlite3_close(DB);
 
 	}
-	};
+	private: System::Void btnCancel_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Hide();
+
+	}
+};
 }

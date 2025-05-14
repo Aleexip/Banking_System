@@ -78,7 +78,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Robert\Downloads\New folder\sqlite-amalgamation-3490100</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\downloads\proiecte_programare\sql\sqlite-amalgamation-3490100</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
@@ -133,11 +133,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Downloads\New folder\sqlite-amalgamation-3490100\sqlite3.h" />
+    <ClInclude Include="..\..\sql\sqlite-amalgamation-3490100\sqlite3.h" />
     <ClInclude Include="Account.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="C:\Users\vadan\Desktop\sqlite-amalgamation-3490100\sqlite3.h" />
+    <ClInclude Include="AccountsClass.h" />
+    <ClInclude Include="CardsClass.h" />
     <ClInclude Include="DatabaseHelper.h" />
     <ClInclude Include="LoginForm.h">
       <FileType>CppForm</FileType>
@@ -148,6 +149,7 @@
     <ClInclude Include="Register.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Session.h" />
     <ClInclude Include="StartPage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -157,6 +159,7 @@
     <ClInclude Include="TransferService.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="UsersClass.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Account.resx">

@@ -1,7 +1,11 @@
 ﻿#pragma once
 #include "MainDashboard.h"
 #include "Account.h"
+#include "UsersClass.h"
+#include "Session.h"
 
+
+#include <msclr/marshal_cppstd.h> // to convert String^ in std::String
 
 
 namespace BankingSystem {
@@ -241,31 +245,68 @@ namespace BankingSystem {
 	private: System::Void label2_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void btnOk_Click(System::Object^ sender, System::EventArgs^ e) {
+		// Validate email and password fields
+		std::string email = msclr::interop::marshal_as<std::string>(tbEmail->Text);
+		std::string password = msclr::interop::marshal_as<std::string>(tbPassword->Text);
 
-		String^ email = tbEmail->Text;
-		String^ password = tbPassword->Text;
+		if (email.empty() || password.empty()) {
+			MessageBox::Show("Please fill in all fields.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			return;
+		}
 
+		sqlite3* DB;
+		sqlite3_stmt* stmt;
+		int rc;
+		int userID = -1; // Variable to store the retrieved user ID
 
-		//if (email->Length == 0 || password->Length == 0) {
-		//	MessageBox::Show("Please fill in all fields.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
-		//	return;
-		//}
+		std::string dbPath = "Files/ebanking.db";
+		rc = sqlite3_open(dbPath.c_str(), &DB);
+		sqlite3_exec(DB, "PRAGMA journal_mode=WAL;", nullptr, nullptr, nullptr);
+		// Modified SQL query to select the user's ID
+		std::string sql = "SELECT id FROM Users WHERE email=@email AND password=@password";
+		rc = sqlite3_prepare_v2(DB, sql.c_str(), -1, &stmt, nullptr);
 
-		//// Check if the user exists in the database
+		// Check if the statement was prepared successfully
+		if (rc != SQLITE_OK) {
+			MessageBox::Show("Failed to execute query.", "Query Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			sqlite3_close(DB);
+			return;
+		}
 
-		//if (checkUser(email, password)) {
-		//	MessageBox::Show("Login successful!", "Success", MessageBoxButtons::OK, MessageBoxIcon::Information);
-		//	// Hide the current form
-		//	this->Hide();
-		//	// Show the main dashboard
-		//	MainDashboard^ mainDashboard = gcnew MainDashboard();
-		//	mainDashboard->ShowDialog(); // open dashboard as dialog
-		//}
-		//else {
-		//	MessageBox::Show("Invalid email or password.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
-		//}
-		//
+		// Bind parameters using numbered placeholders (1 and 2)
+		sqlite3_bind_text(stmt, 1, email.c_str(), -1, SQLITE_TRANSIENT);
+		sqlite3_bind_text(stmt, 2, password.c_str(), -1, SQLITE_TRANSIENT);
+
+		rc = sqlite3_step(stmt);
+
+		if (rc == SQLITE_ROW) {
+			// Retrieve the user ID from the first column
+			userID = sqlite3_column_int(stmt, 0);
+
+			// Check if a valid ID was retrieved
+			if (userID > 0) {
+				// Create User with ID, email, and password
+				Session::LoggedInUser = new User(userID, email, password);
+
+				MessageBox::Show("Login successful!", "Success", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->Hide();
+				MainDashboard^ dashboard = gcnew MainDashboard();
+				dashboard->ShowDialog();
+				this->Close(); // Use Close() instead of Show() to terminate the login form
+			}
+			else {
+				MessageBox::Show("Invalid email or password.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		else {
+			MessageBox::Show("Invalid email or password.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+
+		sqlite3_finalize(stmt); // <-- Finalize after you are done with the statement
+		sqlite3_close(DB);
 	}
+
 
 private: System::Void btnCancel_Click(System::Object^ sender, System::EventArgs^ e) {
 

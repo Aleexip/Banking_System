@@ -160,7 +160,7 @@ namespace BankingSystem {
 		Register^ registerForm = gcnew Register();
 		registerForm->ShowDialog(); // open dashboard as dialog
 
-		Application::Exit(); // close the application when the dashboard is closed
+		this->Show();
 	}
 	private: System::Void StartPage_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
@@ -169,7 +169,7 @@ private: System::Void btnLog_in_Click(System::Object^ sender, System::EventArgs^
 	//open register form
 	this->Hide(); // hide the current form
 
-	// Ensure Register is recognized
+	// Ensure Login is recognized
 	LoginForm^ loginForm = gcnew LoginForm();
 	loginForm->ShowDialog(); // open dashboard as dialog
 

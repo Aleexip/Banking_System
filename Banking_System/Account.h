@@ -65,6 +65,7 @@ namespace BankingSystem {
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::Button^ btnTransactionH;
 	private: System::Windows::Forms::Button^ btnCancel;
+	private: System::Windows::Forms::Button^ btn_card_creation;
 
 
 
@@ -106,6 +107,7 @@ namespace BankingSystem {
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->btnTransactionH = (gcnew System::Windows::Forms::Button());
 			this->btnCancel = (gcnew System::Windows::Forms::Button());
+			this->btn_card_creation = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -201,7 +203,7 @@ namespace BankingSystem {
 			this->btnNewTransfer->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnNewTransfer->Font = (gcnew System::Drawing::Font(L"Segoe UI", 7.8F, System::Drawing::FontStyle::Bold));
 			this->btnNewTransfer->Location = System::Drawing::Point(12, 211);
-			this->btnNewTransfer->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnNewTransfer->Margin = System::Windows::Forms::Padding(2);
 			this->btnNewTransfer->Name = L"btnNewTransfer";
 			this->btnNewTransfer->Size = System::Drawing::Size(264, 28);
 			this->btnNewTransfer->TabIndex = 13;
@@ -366,7 +368,7 @@ namespace BankingSystem {
 				static_cast<System::Int32>(static_cast<System::Byte>(79)));
 			this->btnTransactionH->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10, System::Drawing::FontStyle::Bold));
 			this->btnTransactionH->Location = System::Drawing::Point(165, 41);
-			this->btnTransactionH->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->btnTransactionH->Margin = System::Windows::Forms::Padding(2);
 			this->btnTransactionH->Name = L"btnTransactionH";
 			this->btnTransactionH->Size = System::Drawing::Size(144, 49);
 			this->btnTransactionH->TabIndex = 26;
@@ -388,6 +390,16 @@ namespace BankingSystem {
 			this->btnCancel->TabIndex = 27;
 			this->btnCancel->Text = L"Cancel";
 			this->btnCancel->UseVisualStyleBackColor = false;
+			this->btnCancel->Click += gcnew System::EventHandler(this, &Account::btnCancel_Click);
+			// 
+			// btn_card_creation
+			// 
+			this->btn_card_creation->Location = System::Drawing::Point(416, 41);
+			this->btn_card_creation->Name = L"btn_card_creation";
+			this->btn_card_creation->Size = System::Drawing::Size(170, 47);
+			this->btn_card_creation->TabIndex = 28;
+			this->btn_card_creation->Text = L"Create card";
+			this->btn_card_creation->UseVisualStyleBackColor = true;
 			// 
 			// Account
 			// 
@@ -395,6 +407,7 @@ namespace BankingSystem {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::BlanchedAlmond;
 			this->ClientSize = System::Drawing::Size(711, 454);
+			this->Controls->Add(this->btn_card_creation);
 			this->Controls->Add(this->btnCancel);
 			this->Controls->Add(this->btnTransactionH);
 			this->Controls->Add(this->textBox1);
@@ -418,6 +431,7 @@ namespace BankingSystem {
 			this->Controls->Add(this->lSpentThisMonth);
 			this->Controls->Add(this->label1);
 			this->Name = L"Account";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Account";
 			this->Load += gcnew System::EventHandler(this, &Account::Account_Load);
 			this->ResumeLayout(false);
@@ -441,6 +455,10 @@ namespace BankingSystem {
 		this->Close();// Close the current form
 	}
 private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void btnCancel_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	this->Hide();
 }
 };
 }

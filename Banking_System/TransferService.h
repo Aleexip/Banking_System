@@ -232,7 +232,7 @@ namespace BankingSystem {
 				static_cast<System::Int32>(static_cast<System::Byte>(184)));
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(0, 0);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(91, 57);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -256,7 +256,7 @@ namespace BankingSystem {
 			// 
 			this->mcTransfer->Font = (gcnew System::Drawing::Font(L"Segoe UI", 7.8F));
 			this->mcTransfer->Location = System::Drawing::Point(182, 272);
-			this->mcTransfer->Margin = System::Windows::Forms::Padding(7, 7, 7, 7);
+			this->mcTransfer->Margin = System::Windows::Forms::Padding(7);
 			this->mcTransfer->MinDate = System::DateTime(2025, 5, 9, 0, 0, 0, 0);
 			this->mcTransfer->Name = L"mcTransfer";
 			this->mcTransfer->TabIndex = 12;
@@ -268,7 +268,7 @@ namespace BankingSystem {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10, System::Drawing::FontStyle::Bold));
 			this->button1->ForeColor = System::Drawing::Color::Black;
 			this->button1->Location = System::Drawing::Point(60, 333);
-			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button1->Margin = System::Windows::Forms::Padding(2);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(80, 37);
 			this->button1->TabIndex = 13;
@@ -291,7 +291,7 @@ namespace BankingSystem {
 				static_cast<System::Int32>(static_cast<System::Byte>(184)));
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
 			this->pictureBox2->Location = System::Drawing::Point(13, 129);
-			this->pictureBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->pictureBox2->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox2->Name = L"pictureBox2";
 			this->pictureBox2->Size = System::Drawing::Size(22, 24);
 			this->pictureBox2->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -304,7 +304,7 @@ namespace BankingSystem {
 				static_cast<System::Int32>(static_cast<System::Byte>(184)));
 			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
 			this->pictureBox3->Location = System::Drawing::Point(13, 81);
-			this->pictureBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->pictureBox3->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox3->Name = L"pictureBox3";
 			this->pictureBox3->Size = System::Drawing::Size(22, 24);
 			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -317,7 +317,7 @@ namespace BankingSystem {
 				static_cast<System::Int32>(static_cast<System::Byte>(184)));
 			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
 			this->pictureBox4->Location = System::Drawing::Point(13, 178);
-			this->pictureBox4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->pictureBox4->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox4->Name = L"pictureBox4";
 			this->pictureBox4->Size = System::Drawing::Size(22, 24);
 			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -330,7 +330,7 @@ namespace BankingSystem {
 				static_cast<System::Int32>(static_cast<System::Byte>(184)));
 			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
 			this->pictureBox5->Location = System::Drawing::Point(13, 224);
-			this->pictureBox5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->pictureBox5->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox5->Name = L"pictureBox5";
 			this->pictureBox5->Size = System::Drawing::Size(22, 24);
 			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -343,7 +343,7 @@ namespace BankingSystem {
 				static_cast<System::Int32>(static_cast<System::Byte>(184)));
 			this->pictureBox6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox6.Image")));
 			this->pictureBox6->Location = System::Drawing::Point(13, 272);
-			this->pictureBox6->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->pictureBox6->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox6->Name = L"pictureBox6";
 			this->pictureBox6->Size = System::Drawing::Size(22, 24);
 			this->pictureBox6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -356,7 +356,7 @@ namespace BankingSystem {
 				static_cast<System::Int32>(static_cast<System::Byte>(184)));
 			this->pictureBox7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.Image")));
 			this->pictureBox7->Location = System::Drawing::Point(13, 340);
-			this->pictureBox7->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->pictureBox7->Margin = System::Windows::Forms::Padding(2);
 			this->pictureBox7->Name = L"pictureBox7";
 			this->pictureBox7->Size = System::Drawing::Size(22, 24);
 			this->pictureBox7->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -377,6 +377,7 @@ namespace BankingSystem {
 			this->btnCancel->TabIndex = 21;
 			this->btnCancel->Text = L"Cancel";
 			this->btnCancel->UseVisualStyleBackColor = false;
+			this->btnCancel->Click += gcnew System::EventHandler(this, &TransferService::btnCancel_Click);
 			// 
 			// TransferService
 			// 
@@ -405,8 +406,9 @@ namespace BankingSystem {
 			this->Controls->Add(this->lRecipientName);
 			this->Controls->Add(this->lTransferManual);
 			this->Controls->Add(this->lbTransfer_Design);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"TransferService";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"TransferService";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
@@ -424,5 +426,8 @@ namespace BankingSystem {
 	}
 	private: System::Void lIBAN_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void btnCancel_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+}
 };
 }
