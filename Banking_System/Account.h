@@ -1,6 +1,7 @@
 #pragma once
 #include "TransactionHistory.h"
-
+#include "AccountsClass.h"
+#include "Session.h"
 namespace BankingSystem {
 
 	using namespace System;
@@ -245,7 +246,7 @@ namespace BankingSystem {
 			this->tbIBANAccount->Name = L"tbIBANAccount";
 			this->tbIBANAccount->Size = System::Drawing::Size(215, 25);
 			this->tbIBANAccount->TabIndex = 16;
-			this->tbIBANAccount->Text = L"0000-0000-0000-0000-0000-0000";
+			this->tbIBANAccount->TextChanged += gcnew System::EventHandler(this, &Account::tbIBANAccount_TextChanged);
 			// 
 			// tbCardNumber
 			// 
@@ -440,7 +441,30 @@ namespace BankingSystem {
 		}
 #pragma endregion
 	private: System::Void Account_Load(System::Object^ sender, System::EventArgs^ e) {
-	}
+		sqlite3* db;
+		int rc = sqlite3_open("Files/ebanking.db", &db);
+		sqlite3_exec(db, "PRAGMA journal_mode=WAL;", nullptr, nullptr, nullptr);
+		if (rc != SQLITE_OK) {
+			MessageBox::Show("Cannot open DB", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			return;
+		}
+
+		try {
+			int userId = Session::LoggedInUser->getId();
+
+			if (userId <= 0) {
+				MessageBox::Show("User ID is invalid or not set.", "Session Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				return;
+			}
+			std::string iban = BankingSystem::Accounts::getIbanByUserId(db, userId);
+			tbIBANAccount->Text = gcnew System::String(iban.c_str());
+		}
+		catch (const std::exception& ex) {
+			MessageBox::Show(gcnew System::String(ex.what()), "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+
+		sqlite3_close(db);
+}
 
 	private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
@@ -459,6 +483,9 @@ private: System::Void textBox1_TextChanged(System::Object^ sender, System::Event
 private: System::Void btnCancel_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	this->Hide();
+}
+private: System::Void tbIBANAccount_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+
 }
 };
 }

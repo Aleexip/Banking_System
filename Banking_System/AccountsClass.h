@@ -37,19 +37,20 @@ namespace BankingSystem {
         bool saveToDatabase(sqlite3* db) {
             sqlite3_stmt* stmt;
 
+			// Check if the account number already exists
             const char* sql = "INSERT INTO ACCOUNTS (USER_ID, ACCOUNT_NUMBER, BALANCE) VALUES (?, ?, ?);";
             int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
             if (rc != SQLITE_OK) {
                 throw std::runtime_error(sqlite3_errmsg(db));
             }
-
+			// Bind parameters
             sqlite3_bind_int(stmt, 1, user_id);
             sqlite3_bind_text(stmt, 2, account_number.c_str(), -1, SQLITE_TRANSIENT);
             sqlite3_bind_double(stmt, 3, balance);
 
             rc = sqlite3_step(stmt);
             bool success = (rc == SQLITE_DONE);
-
+			//  Check if the insertion was successful
             if (success) {
                 id = sqlite3_last_insert_rowid(db);
             }
@@ -61,12 +62,12 @@ namespace BankingSystem {
             return success;
         }
 
-
+		// Method to generate a unique IBAN and insert it into the database
         bool generateAndInsertIban(sqlite3* db) {
             sqlite3_stmt* stmt;
             int attempts = 0;
             const int maxAttempts = 10;
-
+			// Generate a unique IBAN
             do {
                 account_number = generateIban();
                 attempts++;
@@ -75,6 +76,7 @@ namespace BankingSystem {
                 }
             } while (ibanExistsInDatabase(db, account_number));
 
+			// Insert the new IBAN into the database
             const char* sql = "INSERT INTO ACCOUNTS (USER_ID, ACCOUNT_NUMBER, BALANCE) VALUES (?, ?, ?);";
             int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
             if (rc != SQLITE_OK) {
@@ -95,7 +97,7 @@ namespace BankingSystem {
             sqlite3_finalize(stmt);
             return success;
         }
-
+		// Check if IBAN exists in the database
         bool ibanExistsInDatabase(sqlite3* db, const std::string& iban) {
             sqlite3_stmt* stmt;
             const char* sql = "SELECT 1 FROM ACCOUNTS WHERE ACCOUNT_NUMBER = ? LIMIT 1";
@@ -116,13 +118,38 @@ namespace BankingSystem {
 
         // Static method to generate IBAN
         static std::string generateIban() {
-            const std::string country_code = "RO";  // Romania (for example)
-            const std::string bank_code = "1234";  // Replace with actual bank code if available
+            const std::string country_code = "RO";  
+            const std::string bank_code = "0101";  
             const std::string account_number = generateRandomNumbers(16);  // Generate a random 16-digit number
 
-            // Here you would calculate the proper check digits for the IBAN
+           
             return country_code + "00" + bank_code + account_number;
         }
+
+	// Static method to get IBAN by user ID
+        static std::string getIbanByUserId(sqlite3* db, int userId) {
+            sqlite3_stmt* stmt;
+            std::string iban = "";
+
+            const char* sql = "SELECT ACCOUNT_NUMBER FROM ACCOUNTS WHERE USER_ID = ? LIMIT 1";
+            int rc = sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr);
+            if (rc != SQLITE_OK) {
+                throw std::runtime_error(sqlite3_errmsg(db));
+            }
+
+            sqlite3_bind_int(stmt, 1, userId);
+
+            if (sqlite3_step(stmt) == SQLITE_ROW) {
+                const unsigned char* text = sqlite3_column_text(stmt, 0);
+                if (text) {
+                    iban = reinterpret_cast<const char*>(text);
+                }
+            }
+
+            sqlite3_finalize(stmt);
+            return iban;
+        }
+
 
     private:
         static std::string generateRandomNumbers(int length) {
@@ -134,6 +161,8 @@ namespace BankingSystem {
             }
             return result;
         }
+
+
     };
 
 } // namespace BankingSystem

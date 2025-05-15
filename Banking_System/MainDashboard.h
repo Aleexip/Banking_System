@@ -180,8 +180,7 @@ namespace BankingSystem {
 		}
 #pragma endregion
 	private: System::Void btnAccount_Click(System::Object^ sender, System::EventArgs^ e) {
-
-		
+	
 		this->Hide(); // hide the current form
 
 		Account^ account = gcnew Account();
@@ -223,7 +222,7 @@ private: System::Void btn_create_account_Click(System::Object^ sender, System::E
 
 		sqlite3* db;
 		int rc = sqlite3_open("Files/ebanking.db", &db);
-
+		sqlite3_exec(db, "PRAGMA journal_mode=WAL;", nullptr, nullptr, nullptr);
 		if (rc != SQLITE_OK) {
 			MessageBox::Show("Cannot open database.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			return;

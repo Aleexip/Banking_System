@@ -262,6 +262,7 @@ namespace BankingSystem {
 		std::string dbPath = "Files/ebanking.db";
 		rc = sqlite3_open(dbPath.c_str(), &DB);
 		sqlite3_exec(DB, "PRAGMA journal_mode=WAL;", nullptr, nullptr, nullptr);
+
 		// Modified SQL query to select the user's ID
 		std::string sql = "SELECT id FROM Users WHERE email=@email AND password=@password";
 		rc = sqlite3_prepare_v2(DB, sql.c_str(), -1, &stmt, nullptr);
@@ -293,7 +294,7 @@ namespace BankingSystem {
 				this->Hide();
 				MainDashboard^ dashboard = gcnew MainDashboard();
 				dashboard->ShowDialog();
-				this->Close(); // Use Close() instead of Show() to terminate the login form
+				this->Close(); 
 			}
 			else {
 				MessageBox::Show("Invalid email or password.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
@@ -303,7 +304,7 @@ namespace BankingSystem {
 			MessageBox::Show("Invalid email or password.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
 
-		sqlite3_finalize(stmt); // <-- Finalize after you are done with the statement
+		sqlite3_finalize(stmt); 
 		sqlite3_close(DB);
 	}
 
