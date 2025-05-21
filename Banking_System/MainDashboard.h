@@ -147,12 +147,16 @@ namespace BankingSystem {
 			// 
 			// btn_create_account
 			// 
-			this->btn_create_account->Location = System::Drawing::Point(248, 110);
+			this->btn_create_account->BackColor = System::Drawing::Color::Gray;
+			this->btn_create_account->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btn_create_account->ForeColor = System::Drawing::Color::Black;
+			this->btn_create_account->Location = System::Drawing::Point(180, 110);
 			this->btn_create_account->Name = L"btn_create_account";
-			this->btn_create_account->Size = System::Drawing::Size(107, 50);
+			this->btn_create_account->Size = System::Drawing::Size(95, 49);
 			this->btn_create_account->TabIndex = 6;
 			this->btn_create_account->Text = L"Create Account";
-			this->btn_create_account->UseVisualStyleBackColor = true;
+			this->btn_create_account->UseVisualStyleBackColor = false;
 			this->btn_create_account->Click += gcnew System::EventHandler(this, &MainDashboard::btn_create_account_Click);
 			// 
 			// MainDashboard
@@ -218,7 +222,7 @@ private: System::Void l_Welcome_back_Click(System::Object^ sender, System::Event
 private: System::Void btn_create_account_Click(System::Object^ sender, System::EventArgs^ e) {
 	try {
 		int currentUserId = Session::LoggedInUser->getId();
-		BankingSystem::Accounts newAccount(currentUserId, "", 0.0);
+		BankingSystem::Accounts newAccount(currentUserId, "", 1000);
 
 		sqlite3* db;
 		int rc = sqlite3_open("Files/ebanking.db", &db);
@@ -228,16 +232,19 @@ private: System::Void btn_create_account_Click(System::Object^ sender, System::E
 			return;
 		}
 
+		if (BankingSystem::Accounts::userHasAccount(db, currentUserId)) {
+			sqlite3_close(db);
+			MessageBox::Show("You already have a bank account!", "Info", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			return;
+		}
 
 		bool success = newAccount.generateAndInsertIban(db);
-		// alternativ:
-		// bool success = newAccount.saveToDatabase(db);
-
-		sqlite3_close(db); // închide după toate operațiile
+		
+		sqlite3_close(db); // close the database connection
 
 		if (success) {
 			MessageBox::Show("Account created successfully!", "Success", MessageBoxButtons::OK, MessageBoxIcon::Information);
-		}
+		} 
 		else {
 			MessageBox::Show("Failed to create account.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}

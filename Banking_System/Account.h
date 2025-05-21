@@ -2,6 +2,8 @@
 #include "TransactionHistory.h"
 #include "AccountsClass.h"
 #include "Session.h"
+#include "CardsClass.h"
+
 namespace BankingSystem {
 
 	using namespace System;
@@ -51,7 +53,7 @@ namespace BankingSystem {
 
 	private: System::Windows::Forms::TextBox^ tbCurrentAccount;
 
-	private: System::Windows::Forms::Button^ btnNewTransfer;
+
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ lIBANAccount;
 	private: System::Windows::Forms::TextBox^ tbIBANAccount;
@@ -62,9 +64,9 @@ namespace BankingSystem {
 	private: System::Windows::Forms::TextBox^ tbCVC;
 	private: System::Windows::Forms::Label^ lCVC;
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ lMoneyBack;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::Button^ btnTransactionH;
+
+
+
 	private: System::Windows::Forms::Button^ btnCancel;
 	private: System::Windows::Forms::Button^ btn_card_creation;
 
@@ -93,7 +95,6 @@ namespace BankingSystem {
 			this->lAccount_Design = (gcnew System::Windows::Forms::Label());
 			this->lCurrentAccount = (gcnew System::Windows::Forms::Label());
 			this->tbCurrentAccount = (gcnew System::Windows::Forms::TextBox());
-			this->btnNewTransfer = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->lIBANAccount = (gcnew System::Windows::Forms::Label());
 			this->tbIBANAccount = (gcnew System::Windows::Forms::TextBox());
@@ -104,9 +105,6 @@ namespace BankingSystem {
 			this->tbCVC = (gcnew System::Windows::Forms::TextBox());
 			this->lCVC = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->lMoneyBack = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->btnTransactionH = (gcnew System::Windows::Forms::Button());
 			this->btnCancel = (gcnew System::Windows::Forms::Button());
 			this->btn_card_creation = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
@@ -197,20 +195,6 @@ namespace BankingSystem {
 			this->tbCurrentAccount->TabIndex = 12;
 			this->tbCurrentAccount->TextChanged += gcnew System::EventHandler(this, &Account::textBox2_TextChanged);
 			// 
-			// btnNewTransfer
-			// 
-			this->btnNewTransfer->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(78)), static_cast<System::Int32>(static_cast<System::Byte>(148)),
-				static_cast<System::Int32>(static_cast<System::Byte>(79)));
-			this->btnNewTransfer->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btnNewTransfer->Font = (gcnew System::Drawing::Font(L"Segoe UI", 7.8F, System::Drawing::FontStyle::Bold));
-			this->btnNewTransfer->Location = System::Drawing::Point(12, 211);
-			this->btnNewTransfer->Margin = System::Windows::Forms::Padding(2);
-			this->btnNewTransfer->Name = L"btnNewTransfer";
-			this->btnNewTransfer->Size = System::Drawing::Size(264, 28);
-			this->btnNewTransfer->TabIndex = 13;
-			this->btnNewTransfer->Text = L"New Transfer";
-			this->btnNewTransfer->UseVisualStyleBackColor = false;
-			// 
 			// label2
 			// 
 			this->label2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
@@ -258,7 +242,6 @@ namespace BankingSystem {
 			this->tbCardNumber->Name = L"tbCardNumber";
 			this->tbCardNumber->Size = System::Drawing::Size(148, 25);
 			this->tbCardNumber->TabIndex = 18;
-			this->tbCardNumber->Text = L"0000-0000-0000-0000";
 			// 
 			// lCardNumber
 			// 
@@ -284,7 +267,6 @@ namespace BankingSystem {
 			this->tbExpirationDate->Name = L"tbExpirationDate";
 			this->tbExpirationDate->Size = System::Drawing::Size(60, 25);
 			this->tbExpirationDate->TabIndex = 20;
-			this->tbExpirationDate->Text = L"10/27";
 			// 
 			// lExpirationDate
 			// 
@@ -310,7 +292,6 @@ namespace BankingSystem {
 			this->tbCVC->Name = L"tbCVC";
 			this->tbCVC->Size = System::Drawing::Size(32, 25);
 			this->tbCVC->TabIndex = 22;
-			this->tbCVC->Text = L"000";
 			// 
 			// lCVC
 			// 
@@ -337,46 +318,6 @@ namespace BankingSystem {
 			this->label3->Size = System::Drawing::Size(269, 80);
 			this->label3->TabIndex = 23;
 			// 
-			// lMoneyBack
-			// 
-			this->lMoneyBack->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(230)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
-				static_cast<System::Int32>(static_cast<System::Byte>(184)));
-			this->lMoneyBack->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Bold));
-			this->lMoneyBack->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(43)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
-				static_cast<System::Int32>(static_cast<System::Byte>(43)));
-			this->lMoneyBack->Location = System::Drawing::Point(14, 258);
-			this->lMoneyBack->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
-			this->lMoneyBack->Name = L"lMoneyBack";
-			this->lMoneyBack->Size = System::Drawing::Size(134, 20);
-			this->lMoneyBack->TabIndex = 24;
-			this->lMoneyBack->Text = L"Money Back";
-			// 
-			// textBox1
-			// 
-			this->textBox1->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->textBox1->BackColor = System::Drawing::Color::WhiteSmoke;
-			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10, System::Drawing::FontStyle::Bold));
-			this->textBox1->Location = System::Drawing::Point(13, 284);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(131, 25);
-			this->textBox1->TabIndex = 25;
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &Account::textBox1_TextChanged);
-			// 
-			// btnTransactionH
-			// 
-			this->btnTransactionH->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(78)), static_cast<System::Int32>(static_cast<System::Byte>(148)),
-				static_cast<System::Int32>(static_cast<System::Byte>(79)));
-			this->btnTransactionH->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10, System::Drawing::FontStyle::Bold));
-			this->btnTransactionH->Location = System::Drawing::Point(165, 41);
-			this->btnTransactionH->Margin = System::Windows::Forms::Padding(2);
-			this->btnTransactionH->Name = L"btnTransactionH";
-			this->btnTransactionH->Size = System::Drawing::Size(144, 49);
-			this->btnTransactionH->TabIndex = 26;
-			this->btnTransactionH->Text = L"Transaction History";
-			this->btnTransactionH->UseVisualStyleBackColor = false;
-			this->btnTransactionH->Click += gcnew System::EventHandler(this, &Account::btnTransactionH_Click);
-			// 
 			// btnCancel
 			// 
 			this->btnCancel->Anchor = System::Windows::Forms::AnchorStyles::None;
@@ -395,12 +336,14 @@ namespace BankingSystem {
 			// 
 			// btn_card_creation
 			// 
-			this->btn_card_creation->Location = System::Drawing::Point(416, 41);
+			this->btn_card_creation->BackColor = System::Drawing::Color::Green;
+			this->btn_card_creation->Location = System::Drawing::Point(49, 267);
 			this->btn_card_creation->Name = L"btn_card_creation";
 			this->btn_card_creation->Size = System::Drawing::Size(170, 47);
 			this->btn_card_creation->TabIndex = 28;
 			this->btn_card_creation->Text = L"Create card";
-			this->btn_card_creation->UseVisualStyleBackColor = true;
+			this->btn_card_creation->UseVisualStyleBackColor = false;
+			this->btn_card_creation->Click += gcnew System::EventHandler(this, &Account::btn_card_creation_Click);
 			// 
 			// Account
 			// 
@@ -410,9 +353,6 @@ namespace BankingSystem {
 			this->ClientSize = System::Drawing::Size(711, 454);
 			this->Controls->Add(this->btn_card_creation);
 			this->Controls->Add(this->btnCancel);
-			this->Controls->Add(this->btnTransactionH);
-			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->lMoneyBack);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->tbCVC);
 			this->Controls->Add(this->lCVC);
@@ -423,7 +363,6 @@ namespace BankingSystem {
 			this->Controls->Add(this->tbIBANAccount);
 			this->Controls->Add(this->lIBANAccount);
 			this->Controls->Add(this->label2);
-			this->Controls->Add(this->btnNewTransfer);
 			this->Controls->Add(this->tbCurrentAccount);
 			this->Controls->Add(this->lCurrentAccount);
 			this->Controls->Add(this->lAccount_Design);
@@ -458,6 +397,9 @@ namespace BankingSystem {
 			}
 			std::string iban = BankingSystem::Accounts::getIbanByUserId(db, userId);
 			tbIBANAccount->Text = gcnew System::String(iban.c_str());
+
+			double balance = BankingSystem::Accounts::getBalanceByUserId(db, userId);
+			tbCurrentAccount->Text = balance.ToString("F2");;
 		}
 		catch (const std::exception& ex) {
 			MessageBox::Show(gcnew System::String(ex.what()), "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
@@ -486,6 +428,78 @@ private: System::Void btnCancel_Click(System::Object^ sender, System::EventArgs^
 }
 private: System::Void tbIBANAccount_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 
+}
+private: System::Void btn_card_creation_Click(System::Object^ sender, System::EventArgs^ e) {
+	try {
+		int userId = Session::LoggedInUser->getId();
+
+		// Open DB
+		sqlite3* db;
+		int rc = sqlite3_open("Files/ebanking.db", &db);
+		sqlite3_exec(db, "PRAGMA journal_mode=WAL;", nullptr, nullptr, nullptr);
+		if (rc != SQLITE_OK) {
+			MessageBox::Show("Cannot open database.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			return;
+		}
+
+		//Get account_id of the user
+		sqlite3_stmt* stmt;
+		int accountId = -1;
+
+		std::string sql = "SELECT ID FROM ACCOUNTS WHERE USER_ID = ?";
+		rc = sqlite3_prepare_v2(db, sql.c_str(), -1, &stmt, nullptr);
+		if (rc == SQLITE_OK) {
+			sqlite3_bind_int(stmt, 1, userId);
+			if (sqlite3_step(stmt) == SQLITE_ROW) {
+				accountId = sqlite3_column_int(stmt, 0);
+			}
+		}
+		sqlite3_finalize(stmt);
+
+		if (accountId == -1) {
+			sqlite3_close(db);
+			MessageBox::Show("You must first create an account!", "Error", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+			return;
+		}
+
+		//Generate card using C++ class
+		Card newCard(accountId);  // Generates card_number, exp_date, cvc
+
+		//Insert into CARDS table
+		const char* insertSQL = "INSERT INTO CARDS (ACCOUNT_ID, CARD_NUMBER, EXPIRATION_DATE, CVC) VALUES (?, ?, ?, ?)";
+		rc = sqlite3_prepare_v2(db, insertSQL, -1, &stmt, nullptr);
+		if (rc != SQLITE_OK) {
+			MessageBox::Show("Failed to prepare card insert statement.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			sqlite3_close(db);
+			return; 
+		}
+
+		sqlite3_bind_int(stmt, 1, newCard.getAccountId());
+		sqlite3_bind_text(stmt, 2, newCard.getCardNumber().c_str(), -1, SQLITE_TRANSIENT);
+		sqlite3_bind_text(stmt, 3, newCard.getExpirationDate().c_str(), -1, SQLITE_TRANSIENT);
+		sqlite3_bind_text(stmt, 4, newCard.getCVC().c_str(), -1, SQLITE_TRANSIENT);
+
+		bool success = (sqlite3_step(stmt) == SQLITE_DONE);
+		sqlite3_finalize(stmt);
+		sqlite3_close(db);
+
+		if (success) {
+			MessageBox::Show("Card created successfully!", "Success", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			
+			// Set the labels with the generated card data
+			tbCardNumber->Text = gcnew System::String(newCard.getCardNumber().c_str());
+			tbExpirationDate->Text = gcnew System::String(newCard.getExpirationDate().c_str());
+			tbCVC->Text = gcnew System::String(newCard.getCVC().c_str());
+
+		}
+		else {
+			MessageBox::Show("Failed to create card.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+
+	}
+	catch (const std::exception& ex) {
+		MessageBox::Show(gcnew System::String(ex.what()), "Exception", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
 }
 };
 }

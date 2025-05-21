@@ -1,4 +1,9 @@
 #pragma once
+#include "AccountsClass.h"
+#include "Session.h"
+#include <chrono>
+#include <ctime>
+
 
 namespace BankingSystem {
 
@@ -274,6 +279,7 @@ namespace BankingSystem {
 			this->button1->TabIndex = 13;
 			this->button1->Text = L"Sign";
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &TransferService::button1_Click);
 			// 
 			// lbTransfer_Design
 			// 
@@ -428,6 +434,78 @@ namespace BankingSystem {
 	}
 private: System::Void btnCancel_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Hide();
+}
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	try {
+		int senderUserId = Session::LoggedInUser->getId();
+		std::string recipientIban = msclr::interop::marshal_as<std::string>(tbIBAN->Text);
+		double amount = std::stod(msclr::interop::marshal_as<std::string>(tbAmount->Text));
+		std::string note = msclr::interop::marshal_as<std::string>(tbPaymentNote->Text);
+		std::string date = msclr::interop::marshal_as<std::string>(
+			mcTransfer->SelectionStart.ToString()
+		);
+		std::string recipientName = msclr::interop::marshal_as<std::string>(tbRecipientName->Text);
+		auto now = std::chrono::system_clock::now();
+		std::time_t now_time = std::chrono::system_clock::to_time_t(now);
+		std::string timestamp = std::ctime(&now_time);
+		timestamp.erase(std::remove(timestamp.begin(), timestamp.end(), '\n'), timestamp.end()); // remove newline
+
+
+
+		sqlite3* db;
+		if (sqlite3_open("Files/ebanking.db", &db) != SQLITE_OK) {
+			MessageBox::Show("Database open failed.");
+			return;
+		}
+		sqlite3_exec(db, "PRAGMA journal_mode=WAL;", nullptr, nullptr, nullptr);
+
+		// Get sender account ID & balance
+		std::string senderAccountId = BankingSystem::Accounts::getAccountIdByUserId(db, senderUserId);
+		double senderBalance = BankingSystem::Accounts::getBalanceByAccountId(db, senderAccountId);
+
+		// Get recipient account ID
+		std::string recipientAccountId = BankingSystem::Accounts::getAccountIdByIban(db, recipientIban);
+		if (recipientAccountId.empty()) {
+			MessageBox::Show("Recipient account not found.");
+			sqlite3_close(db);
+			return;
+		}
+
+		// Check if sender has enough balance
+		if (senderBalance < amount) {
+			MessageBox::Show("Insufficient funds.");
+			sqlite3_close(db);
+			return;
+		}
+
+		// Update sender balance
+		BankingSystem::Accounts::updateBalance(db, senderAccountId, senderBalance - amount);
+
+		// Update recipient balance
+		double recipientBalance = BankingSystem::Accounts::getBalanceByAccountId(db, recipientAccountId);
+		BankingSystem::Accounts::updateBalance(db, recipientAccountId, recipientBalance + amount);
+
+		// Insert transaction
+		BankingSystem::Accounts::insertTransaction(
+			db,
+			senderAccountId,
+			recipientName,
+			recipientIban,
+			amount,
+			note,
+			date,       // executionDate
+			timestamp
+		);
+
+
+		sqlite3_close(db);
+
+		MessageBox::Show("Transfer completed successfully!", "Success", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
+	catch (const std::exception& ex) {
+		MessageBox::Show(gcnew System::String(ex.what()), "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
 }
 };
 }
